@@ -17,6 +17,15 @@ Functionalities of this game include:
 2) Directions will appear in blue letters on the screen (sabogating pirates)
 3) The score of the number of correct directions the user has selected will appear on the screen 
 
+# Wireframe 
+ ________    _________
+|Controls|  |Nav Links|         |
+|________|  |_________|
+ ___________________
+|    Game Screen    |
+|                   |
+|                   |
+|___________________|
 # Technologies, Libraries, APIs
 
 This project will be implemented with the following technologies: 
