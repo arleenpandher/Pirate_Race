@@ -18,14 +18,7 @@ Functionalities of this game include:
 3) The score of the number of correct directions the user has selected will appear on the screen 
 
 ### Wireframe 
- ________    _________
-|Controls|  |Nav Links|       |
-|________|  |_________|
- ___________________
-|    Game Screen    |
-|                   |
-|                   |
-|___________________|
+![](https://lh3.googleusercontent.com/gS1N8tVLu5Czu31wHG1BOWMa7hkKl7S-Bbulm_tgCavK1MR-KYPJBIDCxJiSReJa5AQuQMY7aTF5LL-b0ev4IkbCBkipPhCzlBpxRijDvgkUSAdlmbPdEA6D_C4D6yS9S7ntIKNvFqRyGa1OCTX9YH_-_jS8FXBAOTIBHjjQeYv_dmGewX3GnUW4QBpcDIyoUwDVXjadFyhyJkfWEmAkqBsFJj6-lG1U3XQhT4yHyAPC5aPThWs70jkkaS8v-JIUoH3dbGa-PYtFbqSNABXX4cicweGW53CbbMFKaKye94suhKnDzZahSCMSeb32GkrjTk06prr28H5J-6YiTI4zvmkJsNTdTwKl8vWe91Xv-Ud7kOq2Hp0xulPW9xvHZUrZ9wB-XWDn8xe3RFAUxIlzwUKdqfhLDpsQ99oHNHqC0DWcOCiAWaHoKdCo8aSQ22RA8DzHleDi-uEDVeRo2cuAqFLFCiG-ChhGgRj1YzYvPV7EDMGJRq5hlewCLXvLK-gcSizJtpwM_G14Pls6_6WX8XaafKi6837KeCYa8YYbjJZWGvhJm4WRjahd3UQfu7npOKcAqsLnr6qpxVrQPBUM5RlxAjkshm0msVL5CD6AxuKiReWr4J7t7Dxc_m-5CfjVo-OLSK-QXp0uIxxUixYdTnlmjqJIYtiBU3QfVcrKNpO8kCgAVXIBaAYHY0LtQrVElLS0Boxnx0NHfylHk3SXU48=w1024-h600-no?authuser=0)
 #### Technologies, Libraries, APIs
 
 This project will be implemented with the following technologies: 
