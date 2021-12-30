@@ -4,7 +4,7 @@ Pirate's race is a game in which the user is guiding the ship.  One out of the f
 
 The user wins when they correctly press the buttons corresponding to every direction that appears on the screen.  20 different directions mixed with the correct directions (red letters) and the incorrect directions (blue letter) will appear on the screen.  The user will have 3 seconds to correctly press the keyboard, otherwise the game will be over. 
 
-# Functionality & MVPs 
+## Functionality & MVPs 
 
 In this game, users will be able to: 
 
@@ -17,16 +17,16 @@ Functionalities of this game include:
 2) Directions will appear in blue letters on the screen (sabogating pirates)
 3) The score of the number of correct directions the user has selected will appear on the screen 
 
-# Wireframe 
+### Wireframe 
  ________    _________
-|Controls|  |Nav Links|         |
+|Controls|  |Nav Links|       |
 |________|  |_________|
  ___________________
 |    Game Screen    |
 |                   |
 |                   |
 |___________________|
-# Technologies, Libraries, APIs
+#### Technologies, Libraries, APIs
 
 This project will be implemented with the following technologies: 
 
@@ -34,7 +34,7 @@ This project will be implemented with the following technologies:
 2) Webpack and Babel to bundle and transpile the source JavaScript code 
 3) npm to manage project dependencies 
 
-# Implementation Timeline 
+##### Implementation Timeline 
 
 NB: 
 
