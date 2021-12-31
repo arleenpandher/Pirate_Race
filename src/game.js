@@ -5,6 +5,7 @@ const CONSTANTS = {
     NUM_DIRS: 5,
     DIM_X: 600,
     DIM_Y: 600,
+    COLOR: ["red", "blue"]
 };
 
 function Game() {
@@ -14,7 +15,7 @@ function Game() {
 
 Game.prototype.addDirections = function() {
     for (i = 0; i < CONSTANTS.NUM_DIRS; i++) {
-        this.directions.push(new Compdirection(this.randomdirectiongenerator()))
+        this.directions.push(new Compdirection(this.randomdirectiongenerator(), this.randomtypegenerator()))
     }
 }
 
@@ -23,13 +24,19 @@ Game.prototype.randomdirectiongenerator = function() {
     return CONSTANTS.DIRECTIONS[randomnum]
 }
 
+Game.prototype.randomtypegenerator = function() {
+    let randomtype = Math.floor(2*Math.random())
+    return CONSTANTS.COLOR[randomtype]
+}
+
 Game.prototype.draw = function(ctx) {
-    for (i = 0; i < CONSTANTS.NUM_DIRS; i++) {
+    let that = this
+    for (var i = 0; i < CONSTANTS.NUM_DIRS; i++) {
         ctx.clearRect(0, 0, CONSTANTS.DIM_X, CONSTANTS.DIM_Y);
-        ctx.fillStyle = "blue";
+        ctx.fillStyle = "gray";
         ctx.fillRect(0, 0, CONSTANTS.DIM_X,  CONSTANTS.DIM_Y);
-        this.directions[i].display(ctx)
-        i++
+        setInterval(() => {
+            console.log(i)}, 3000)
     }
 }
 
