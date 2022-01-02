@@ -6,20 +6,19 @@ const GameView = require("./gameview.js");
 document.addEventListener('DOMContentLoaded', (event) => {
     const canvas = document.getElementById("game-canvas");
     const ctx = canvas.getContext("2d");
-    const image = document.getElementById('source')
+    const image = document.getElementById("source");
     
-  
+    ctx.font = "30px Arial"
+    ctx.fillText("HELLO", 150, 70)
 
-    // image.onload = function() {
+   
+
+
+    // image.addEventListener('load', e => {
     //     ctx.drawImage(image, 600, 600)
-        
-    // }
+    // });
 
-    image.addEventListener('load', e => {
-        ctx.drawImage(image, 600, 600)
-        // ctx.font="40pt Georgia"
-        // ctx.fillText("North", 400, 400)
-    });
+    
 
  
 
