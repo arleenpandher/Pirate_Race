@@ -30,15 +30,18 @@ Game.prototype.randomtypegenerator = function() {
 }
 
 Game.prototype.draw = function(ctx) {
-    let that = this
-    for (var i = 0; i < CONSTANTS.NUM_DIRS; i++) {
-        ctx.clearRect(0, 0, CONSTANTS.DIM_X, CONSTANTS.DIM_Y);
-        ctx.fillStyle = "gray";
-        ctx.fillRect(0, 0, CONSTANTS.DIM_X,  CONSTANTS.DIM_Y);
-        setInterval(() => {
-            console.log(i)}, 3000)
-    }
+    // let that = this
+    // for (var i = 0; i < CONSTANTS.NUM_DIRS; i++) {
+    //     ctx.clearRect(0, 0, CONSTANTS.DIM_X, CONSTANTS.DIM_Y);
+    //     ctx.fillStyle = "gray";
+    //     ctx.fillRect(0, 0, CONSTANTS.DIM_X,  CONSTANTS.DIM_Y);
+    //     setInterval(() => {
+    //         console.log(i)}, 3000)
+    // }
+    
 }
+
+
 
 
 
