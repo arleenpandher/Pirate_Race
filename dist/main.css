@@ -1,4 +1,22 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
+body {
+  background-image: url('https://lh3.googleusercontent.com/4reAcWbFSJ0ZnDVyZohqafjni6wHuCUuvigNqalRr0-BbVh97iNWj4KrKuQp7iWwFAKpIVBVphHztVGNlj_WVnaSCtVJ-MjMvuE4UON0IlIyYZ9HHyGMet9FtBDRmCt9z4GFwtDEspu9YMJNmZLLg52TlR6ylXnULg-j-aySKGgG4_LyuXczBnNZOjnM2PWw7YQ2vrrkFFQ1reM5vk_U8E1H6XvGjsys1p5Kq6QI0BmXNucXTshy4Q1QLK0ufJR0qQUALyoCngSTRHi0b3lgnIg8k7r00n3oJD5521m5TamMne4qwrAPcnyd9_PvY2BdDWE1xUHBVw6370n6U_r_jo1puGIxip-hugGYcfYOOWlb8qb4ligBLRGVlwOp3ZjtvdFbbCHKjIy6fPEhU5uagSUqoo7aVyeJSgj5Ej077NGzq82mekrk8iHmyCjcwkiDAI-MO06V0cAAAEXmnVCKgjy3ih_6Gw6NRQzxWAvv4wfubjHTj7Pw4dRtukO2OAeux6Df8lLNowjGQRnKl_g24GSYaJiw7YjNjTOChpR488GYlMHYnDLO6xV5ulNs58pi0jY8ElddKXGJhntPYKef1RfyRtanIIANXgG41bwSgWjj10TU3akp7me6ZQWsgfp31fWDL4d04AinPxGFIyDKJLuKH-e91IL20PFoDIDBgdVe4ZlHVdbgLszN-j6qjvQEPyiKak2HivGJhn2rCT-56hg=w1677-h943-no?authuser=0"');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
 
+div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#game-canvas {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
