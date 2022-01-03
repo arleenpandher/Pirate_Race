@@ -18,4 +18,5 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  border: 1px solid black;
 }

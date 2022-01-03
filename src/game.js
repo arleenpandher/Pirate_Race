@@ -11,6 +11,7 @@ const CONSTANTS = {
 function Game() {
     this.directions = []
     this.addDirections()
+    this.score = 0 
 }
 
 Game.prototype.addDirections = function() {
@@ -28,6 +29,13 @@ Game.prototype.randomdirectiongenerator = function() {
 Game.prototype.randomtypegenerator = function() {
     let randomtype = Math.floor(2*Math.random())
     return CONSTANTS.COLOR[randomtype]
+}
+
+Game.prototype.scoredisplay = function(ctx) {
+    ctx.font = "30px Arial";
+    ctx.fillStyle = "black"
+    ctx.textAlign = "center"
+    ctx.fillText(this.score, 50, 25)    
 }
 
 
