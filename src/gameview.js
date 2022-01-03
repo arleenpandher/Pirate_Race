@@ -6,22 +6,23 @@ function GameView(ctx) {
     this.drawing = ctx 
 }
 
-GameView.prototype.draw = function(ctx) {
+// GameView.prototype.appear = function() {
+//     let dir = this.game.directions[0]
+//     dir.display(this.drawing)
+// }
 
-    let dirs = this.game.directions 
-    for (i = 0; i < dirs.length; i++) {
-        dirs[i].display(ctx)
-    } 
-    // let that = this
-    // for (var i = 0; i < CONSTANTS.NUM_DIRS; i++) {
-    //     ctx.clearRect(0, 0, CONSTANTS.DIM_X, CONSTANTS.DIM_Y);
-    //     ctx.fillStyle = "gray";
-    //     ctx.fillRect(0, 0, CONSTANTS.DIM_X,  CONSTANTS.DIM_Y);
-    //     setInterval(() => {
-    //         console.log(i)}, 3000)
-    // }
-    
-}
+// GameView.prototype.disappear = function() {
+//     let dir = this.game.directions[0]
+//     dir.discard(this.drawing)
+//     this.game.directions.shift()
+// }
+
+// GameView.prototype.dir = function() {
+//     for (i = 0; i < this.game.directions.length; i++) {
+//         setTimeout(GameView.appear, 3000+(3000*i))
+//         setTimeout(GameView.disappear, 6000+(3000*i))
+//     }
+// }
 
 
 module.exports = GameView;
