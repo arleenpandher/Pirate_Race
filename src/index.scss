@@ -31,16 +31,26 @@ body {
 //   z-index: 50;
 // }
 
-// #parent {
-//   display: flex;
+#parent {
 
-// }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+
+}
+
+#child {
+  position: relative;
+  top: 140px;
+  left: 35px;
+  
+}
 
 #flag {
   position: absolute;
-  top: 600px;
-  left: 410px;
-  background-color: white; 
+  
+  background-color: transparent; 
   // background-size:     cover;                      
   // background-repeat:   no-repeat;
   // background-position: center center;

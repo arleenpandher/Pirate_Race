@@ -8,15 +8,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const ctx = canvas.getContext("2d");
     const flagcanvas = document.getElementById("flag");
     const flagctx = flagcanvas.getContext("2d")
-    flagctx.translate(100,100)
-    flagctx.rotate(45 * Math.PI / 180);
+    // flagctx.translate(100,100)
+    // flagctx.rotate(45 * Math.PI / 180);
     // flagctx.fillRect(0, 0, 100, 50);
-    flagctx.beginPath();
-    flagctx.moveTo(100,100);
-    flagctx.lineTo(0,0);
-    flagctx.lineWidth = 6
-    flagctx.strokeStyle = "red"
-    flagctx.stroke();
+    // flagctx.beginPath();
+    // flagctx.moveTo(0,80);
+    // flagctx.lineTo(0,0);
+    // flagctx.lineWidth = 6
+    // flagctx.strokeStyle = "red"
+    // flagctx.stroke();
 
     
     const game = new Game()
