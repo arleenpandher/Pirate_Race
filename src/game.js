@@ -12,12 +12,18 @@ function Game() {
     this.directions = []
     this.addDirections()
     this.score = 0 
+    this.over = false 
 }
 
 Game.prototype.addDirections = function() {
     for (i = 0; i < CONSTANTS.NUM_DIRS; i++) {
         let newdir = new Compdirection(this.randomdirectiongenerator(), this.randomtypegenerator())
-        if (newdir !== this.directions[this.directions-1] || this.directions.length === 0) this.directions.push(newdir)
+        
+        if (i !== 0) {
+            let lastobj = this.directions[this.directions.length -1]
+            console.log(this.directions[this.directions.length -1].direction)
+        }
+        if (this.directions.length === 0 || (newdir.direction !== this.directions[this.directions.length -1].direction)) this.directions.push(newdir)
     }
 }
 
@@ -31,11 +37,8 @@ Game.prototype.randomtypegenerator = function() {
     return CONSTANTS.COLOR[randomtype]
 }
 
-Game.prototype.scoredisplay = function(ctx) {
-    ctx.font = "30px Arial";
-    ctx.fillStyle = "black"
-    ctx.textAlign = "center"
-    ctx.fillText(this.score, 50, 25)    
+Game.prototype.end = function() {
+    if (this.directions.length === 0) this.over = true 
 }
 
 
