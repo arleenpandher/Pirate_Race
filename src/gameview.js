@@ -104,7 +104,7 @@ function westCheck(directioncheck) {
     if (directioncheck.direction === "East" && directioncheck.color === "blue") return true 
 } 
 
-
+let stop
 function northFlag() {
     if (stop > 9) {
         cancelAnimationFrame(9)
@@ -118,6 +118,9 @@ function northFlag() {
         this.flag.lineWidth = 6
         this.flag.strokeStyle = "red"
         this.flag.stroke();
+        console.log(stop)
+        stop = 0
+        console.log(stop)
         return
     } 
     this.flag.clearRect(-50,-50, 100, 100)
@@ -132,8 +135,10 @@ function northFlag() {
     this.flag.stroke();
     this.angle += 5
     stop = requestAnimationFrame(northFlag.bind(this))
+    // console.log(stop)
 }
     
+ 
 function eastFlag() {
     if (stop > 9) {
         cancelAnimationFrame(9)
@@ -147,6 +152,7 @@ function eastFlag() {
         this.flag.lineWidth = 6
         this.flag.strokeStyle = "red"
         this.flag.stroke();
+        stop = 0
         return
     } 
     this.flag.clearRect(-50,-50, 100, 100)
@@ -176,6 +182,7 @@ function southFlag() {
         this.flag.lineWidth = 6
         this.flag.strokeStyle = "red"
         this.flag.stroke();
+        stop = 0
         return
     } 
     this.flag.clearRect(-50,-50, 100, 100)
@@ -205,6 +212,7 @@ function westFlag() {
         this.flag.lineWidth = 6
         this.flag.strokeStyle = "red"
         this.flag.stroke();
+        stop = 0
         return
     } 
     this.flag.clearRect(-50,-50, 100, 100)
@@ -230,13 +238,16 @@ GameView.prototype.scoredisplay = function() {
 }
 
 
+GameView.prototype.click = function() {
+    window.addEventListener("click", start.bind(this), false);
+}
 
-
-// GameView.prototype.finished = function() {
-//     if (this.game.over) {
-
-//         }
-// }
+function start() {
+    this.canvas.style.backgroundImage = "url('https://lh3.googleusercontent.com/mVI93u-k-EJG5WGHP_1MYGBuOAcTFOD4rB9rT2B7gnlWKeXqYugPO9izhNj4jPFf7I11WvchL4iY4zBm5Lz2MhEkk1nFbCAYNRMrt2ph2iZZ0ZTRS_4jQlEcK-2aq6yMZkCdKNNgkSRsjfOX84oZ1-YUBJNvJ6t6VejTm_9Q_e1NSX9eDNHl2ALDE14AB9boIyKzHSQTdv7Ht1dV1myJ_C_Ip94756u-7bw2aMzmJ7XZ7k0WaKHIc5opQTKISI9c2qN_WUsDjGn7PxEuGl5iY9i8N1QRMlI-TQU_j9x_cDS_LlAFtvWeg1-K8elbbr6dZI0PtWFafIqX_8niQRhCNzfgE_rzCQZceNKB9QSYOD_3P1HZONHYMR44xHTdhs1KDBUWslOf2YAlbQcMcVzxYeAKopc2AKF689lbkBxJLjEBpwmZCU_me43_5vlCIVE_CfXTVknpUU0ee-tyepnnWABBYUUTiHINKzKybcyWcqOzecZDyEeE9Xr8g3ueP-H-l3TP_0622NzxTuAC-0BvH_ZpRfiKYKE_kaCTwFv5XIXS5Aw0AbPEhEzjYYr4LQ23yIe6ht2HNDK-1R8h5Io002S45uxrzisP25oUFaAH4jPu7nMjEwsAtMAqZyXue3-XRODSFeOzJPUzVwinnbXB-gIF5F7okeLSOsYLTjlfGBeE1bvTd3I4DSdNMNqgaQIZdQnwTnArXUxk8TU7_SPG3EY=s943-no?authuser=0')"
+    this.game.addDirections()
+    this.dir()
+    this.keydown()
+}
 
 
 module.exports = GameView;

@@ -10,9 +10,9 @@ const CONSTANTS = {
 
 function Game() {
     this.directions = []
-    this.addDirections()
+    // this.addDirections()
     this.score = 0 
-    this.over = false 
+    this.over = true 
 }
 
 Game.prototype.addDirections = function() {
@@ -38,7 +38,7 @@ Game.prototype.randomtypegenerator = function() {
 }
 
 Game.prototype.end = function() {
-    if (this.directions.length === 0) this.over = true 
+    if (this.directions.length !== 0) this.over = false  
 }
 
 

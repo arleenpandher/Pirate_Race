@@ -4,10 +4,13 @@ const GameView = require("./gameview.js");
 const Flag = require("./flag.js");
 
 document.addEventListener('DOMContentLoaded', (event) => {
+    
     const canvas = document.getElementById("game-canvas");
     const ctx = canvas.getContext("2d");
     const flagcanvas = document.getElementById("flag");
     const flagctx = flagcanvas.getContext("2d")
+
+    ctx.globalCompositeOperation = "lighter"
     // flagctx.translate(50,50)
     // flagctx.rotate(0 * (Math.PI / 180));
     // flagctx.beginPath();
@@ -52,8 +55,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
      
     const game = new Game()
     const gameview = new GameView(ctx, canvas, game, flagctx)
-    gameview.dir()
-    gameview.keydown()
+    gameview.click()
+    // gameview.dir()
+    // gameview.keydown()
     // gameview.keyup()    
 
 });
