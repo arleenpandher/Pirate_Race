@@ -9,54 +9,47 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const flagcanvas = document.getElementById("flag");
     const flagctx = flagcanvas.getContext("2d")
     flagctx.translate(50,50)
-    // flagctx.rotate(90 * Math.PI / 180);
-    // flagctx.fillRect(0, 0, 100, 50);
+    flagctx.rotate(0 * (Math.PI / 180));
     flagctx.beginPath();
     flagctx.moveTo(0,0);
     flagctx.lineTo(50,-50);
     flagctx.lineWidth = 6
     flagctx.strokeStyle = "red"
     flagctx.stroke();
-
     
+     let angle = 0
+    let stop 
+    function loop() {
+        
+            // console.log(angle)
+            // flagctx.setTransform(1,0,0,1,0,0)
+            flagctx.clearRect(-50,-50, 100, 100)
+            flagctx.setTransform(1,0,0,1,0,0)
+            flagctx.translate(50,50)
+            flagctx.rotate(angle * (Math.PI / 180));
+            flagctx.beginPath();
+            flagctx.moveTo(0,0);
+            flagctx.lineTo(50,-50);
+            flagctx.lineWidth = 6
+            flagctx.strokeStyle = "red"
+            flagctx.stroke();
+            angle += 1
+            stop = requestAnimationFrame(loop)
+        
+        // requestAnimationFrame(loop)
+    }
+
+    loop()
+   
+
+  
+     
     const game = new Game()
     const gameview = new GameView(ctx, canvas, game)
     // gameview.dir()
     gameview.keydown()
-    gameview.keyup()
-    // const flag = new Flag() 
-    // flag.draw(ctx)
-    // flag.rotate1()
-    // flag.northFlag(ctx)
-    // flag.eastFlag(ctx)
-    // flag.southFlag(ctx)
-    // flag.westFlag(ctx)
-
-    
-    // flagctx.beginPath();
-    // flagctx.moveTo(0,80);
-    // flagctx.lineTo(60,0);
-    // flagctx.lineWidth = 6
-    // flagctx.strokeStyle = "red"
-    // flagctx.stroke();
-    // flagctx.translate(0,0)
-    // flagctx.rotate(Math.PI/3);
-    // flagctx.fillRect(0,0,60,80)
-    
-    // flagctx.rotate(Math.PI/5);
-
-    
+    gameview.keyup()    
 
 });
 
 
-// document.addEventListener('DOMContentLoaded', (event) => {
-//     const canvas = document.getElementById("flag");
-//     const ctx = canvas.getContext("2d");
-
-//     // ctx.beginPath()
-//     // ctx.moveTo(565,510)
-//     // ctx.lineTo(685,590)
-//     // ctx.color ="red"
-//     // ctx.stroke();
-// });
