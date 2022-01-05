@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
      
     const game = new Game()
     const gameview = new GameView(ctx, canvas, game, flagctx)
-    gameview.instructions()
+    // gameview.instructions()
     gameview.click()
     // gameview.dir()
     // gameview.keydown()
