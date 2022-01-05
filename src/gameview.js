@@ -1,12 +1,13 @@
 const Game = require("./game.js");
 
 
-function GameView(ctx, canvas, game, flagctx) {
+function GameView(ctx, canvas, game, flagctx, scorectx) {
     this.game = game
     this.drawing = ctx 
     this.canvas = canvas
     this.flag = flagctx 
     this.angle = 0
+    this.score = scorectx
 }
 
 GameView.prototype.appear = function() {
@@ -67,22 +68,6 @@ function check(key) {
     }   
 }
 
-// function base() {
-//     this.canvas.style.backgroundImage = "url('https://lh3.googleusercontent.com/mVI93u-k-EJG5WGHP_1MYGBuOAcTFOD4rB9rT2B7gnlWKeXqYugPO9izhNj4jPFf7I11WvchL4iY4zBm5Lz2MhEkk1nFbCAYNRMrt2ph2iZZ0ZTRS_4jQlEcK-2aq6yMZkCdKNNgkSRsjfOX84oZ1-YUBJNvJ6t6VejTm_9Q_e1NSX9eDNHl2ALDE14AB9boIyKzHSQTdv7Ht1dV1myJ_C_Ip94756u-7bw2aMzmJ7XZ7k0WaKHIc5opQTKISI9c2qN_WUsDjGn7PxEuGl5iY9i8N1QRMlI-TQU_j9x_cDS_LlAFtvWeg1-K8elbbr6dZI0PtWFafIqX_8niQRhCNzfgE_rzCQZceNKB9QSYOD_3P1HZONHYMR44xHTdhs1KDBUWslOf2YAlbQcMcVzxYeAKopc2AKF689lbkBxJLjEBpwmZCU_me43_5vlCIVE_CfXTVknpUU0ee-tyepnnWABBYUUTiHINKzKybcyWcqOzecZDyEeE9Xr8g3ueP-H-l3TP_0622NzxTuAC-0BvH_ZpRfiKYKE_kaCTwFv5XIXS5Aw0AbPEhEzjYYr4LQ23yIe6ht2HNDK-1R8h5Io002S45uxrzisP25oUFaAH4jPu7nMjEwsAtMAqZyXue3-XRODSFeOzJPUzVwinnbXB-gIF5F7okeLSOsYLTjlfGBeE1bvTd3I4DSdNMNqgaQIZdQnwTnArXUxk8TU7_SPG3EY=s943-no?authuser=0')"
-// }
-
-// function base() {
-//     this.flag.clearRect(-50,-50, 100, 100)
-//     this.flag.setTransform(1,0,0,1,0,0)
-//     this.flag.translate(50,50)
-//     this.flag.rotate(0 * (Math.PI / 180));
-//     this.flag.beginPath();
-//     this.flag.moveTo(0,0);
-//     this.flag.lineTo(50,-50);
-//     this.flag.lineWidth = 6
-//     this.flag.strokeStyle = "red"
-//     this.flag.stroke();
-// }
 
 function northCheck(directioncheck) {
     if (directioncheck.direction === "North" && directioncheck.color === "red") return true 
@@ -120,8 +105,6 @@ function northFlag() {
         this.flag.stroke();
         this.angle = 0
         ncounter = 0
-        // requestAnimationFrame(northFlag.bind(this)) = 0
-        
         return
     } 
     this.flag.clearRect(-50,-50, 100, 100)
@@ -138,24 +121,6 @@ function northFlag() {
     this.angle += 5
     ncounter += 1
     stop = requestAnimationFrame(northFlag.bind(this))
-    // if (stop > 9) {
-    //     cancelAnimationFrame(9)
-    //     this.flag.clearRect(-50,-50, 100, 100)
-    //     this.flag.setTransform(1,0,0,1,0,0)
-    //     this.flag.translate(50,50)
-    //     this.flag.rotate(0 * (Math.PI / 180));
-    //     this.flag.beginPath();
-    //     this.flag.moveTo(0,0);
-    //     this.flag.lineTo(50,-50);
-    //     this.flag.lineWidth = 6
-    //     this.flag.strokeStyle = "red"
-    //     this.flag.stroke();
-    //     console.log(stop)
-    //     stop = 0
-    //     console.log(stop)
-    //     return
-    // } 
-    // console.log(stop)
 }
     
 let ecounter = 0
@@ -189,21 +154,6 @@ function eastFlag() {
     this.angle += 5
     ecounter += 1
     stop = requestAnimationFrame(eastFlag.bind(this))
-    // if (stop > 9) {
-    //     cancelAnimationFrame(9)
-    //     this.flag.clearRect(-50,-50, 100, 100)
-    //     this.flag.setTransform(1,0,0,1,0,0)
-    //     this.flag.translate(50,50)
-    //     this.flag.rotate(0 * (Math.PI / 180));
-    //     this.flag.beginPath();
-    //     this.flag.moveTo(0,0);
-    //     this.flag.lineTo(50,-50);
-    //     this.flag.lineWidth = 6
-    //     this.flag.strokeStyle = "red"
-    //     this.flag.stroke();
-    //     stop = 0
-    //     return
-    // } 
 }
 let scounter = 0
 
@@ -237,21 +187,6 @@ function southFlag() {
     this.angle += 5
     scounter += 1
     stop = requestAnimationFrame(southFlag.bind(this))
-    // if (stop > 27) {
-    //     cancelAnimationFrame(9)
-    //     this.flag.clearRect(-50,-50, 100, 100)
-    //     this.flag.setTransform(1,0,0,1,0,0)
-    //     this.flag.translate(50,50)
-    //     this.flag.rotate(0 * (Math.PI / 180));
-    //     this.flag.beginPath();
-    //     this.flag.moveTo(0,0);
-    //     this.flag.lineTo(50,-50);
-    //     this.flag.lineWidth = 6
-    //     this.flag.strokeStyle = "red"
-    //     this.flag.stroke();
-    //     stop = 0
-    //     return
-    // } 
 }
 
 let wcounter = 0
@@ -285,21 +220,6 @@ function westFlag() {
     this.angle += 5
     wcounter += 1
     stop = requestAnimationFrame(westFlag.bind(this))
-    // if (stop > 45) {
-    //     cancelAnimationFrame(9)
-    //     this.flag.clearRect(-50,-50, 100, 100)
-    //     this.flag.setTransform(1,0,0,1,0,0)
-    //     this.flag.translate(50,50)
-    //     this.flag.rotate(0 * (Math.PI / 180));
-    //     this.flag.beginPath();
-    //     this.flag.moveTo(0,0);
-    //     this.flag.lineTo(50,-50);
-    //     this.flag.lineWidth = 6
-    //     this.flag.strokeStyle = "red"
-    //     this.flag.stroke();
-    //     stop = 0
-    //     return
-    // } 
 }
     
 GameView.prototype.instructions = function() {
@@ -332,10 +252,11 @@ GameView.prototype.instructions = function() {
 }
 
 GameView.prototype.scoredisplay = function() {
-    this.drawing.font = "30px Arial";
-    this.drawing.fillStyle = "black"
-    this.drawing.textAlign = "center"
-    this.drawing.fillText(this.game.score, 50, 25)    
+    this.score.clearRect(0,0,150,50)
+    this.score.font = "25px Arial";
+    this.score.fillStyle = "black"
+    this.score.textAlign = "center"
+    this.score.fillText(`Score: ${this.game.score}`, 75, 30)    
 }
 
 
@@ -345,7 +266,7 @@ GameView.prototype.click = function() {
 
 function start() {
 
-    this.canvas.style.backgroundImage = "url('https://lh3.googleusercontent.com/mVI93u-k-EJG5WGHP_1MYGBuOAcTFOD4rB9rT2B7gnlWKeXqYugPO9izhNj4jPFf7I11WvchL4iY4zBm5Lz2MhEkk1nFbCAYNRMrt2ph2iZZ0ZTRS_4jQlEcK-2aq6yMZkCdKNNgkSRsjfOX84oZ1-YUBJNvJ6t6VejTm_9Q_e1NSX9eDNHl2ALDE14AB9boIyKzHSQTdv7Ht1dV1myJ_C_Ip94756u-7bw2aMzmJ7XZ7k0WaKHIc5opQTKISI9c2qN_WUsDjGn7PxEuGl5iY9i8N1QRMlI-TQU_j9x_cDS_LlAFtvWeg1-K8elbbr6dZI0PtWFafIqX_8niQRhCNzfgE_rzCQZceNKB9QSYOD_3P1HZONHYMR44xHTdhs1KDBUWslOf2YAlbQcMcVzxYeAKopc2AKF689lbkBxJLjEBpwmZCU_me43_5vlCIVE_CfXTVknpUU0ee-tyepnnWABBYUUTiHINKzKybcyWcqOzecZDyEeE9Xr8g3ueP-H-l3TP_0622NzxTuAC-0BvH_ZpRfiKYKE_kaCTwFv5XIXS5Aw0AbPEhEzjYYr4LQ23yIe6ht2HNDK-1R8h5Io002S45uxrzisP25oUFaAH4jPu7nMjEwsAtMAqZyXue3-XRODSFeOzJPUzVwinnbXB-gIF5F7okeLSOsYLTjlfGBeE1bvTd3I4DSdNMNqgaQIZdQnwTnArXUxk8TU7_SPG3EY=s943-no?authuser=0')"
+    this.canvas.style.backgroundImage = "url('https://lh3.googleusercontent.com/53-JL9ShR7ceYc9cT956glP2qzyk0sQQa6MOK_k0Jf-_EuoQBOesZdpdFwL7x1igX0aqxundcT32B1m2HTRtRKqKUvUBQsT8JhmXyH_3hHgPbsYWpBORS1JY55lEKbG7SKg8VJKqQLSYS6Hz1ERPejl4ZcJncalAEoABaJx43EpZPPeSmcW_h-qEjZER9KFfPxzTdQZ2DYXv0Q2fIa_b7FNXiMIXiFNA2mNlOvlttf6k4BSPirm69YAO2JvsnnbuRtEHcTqvM27QPRMP_Y5MXijPDGe6cLlaBSLm6Ny6WwmhD2mzQuxpO_N9PZRHmypZ5l5K5-RIurnk3zz54QMDuvU0Amo5ouEr6IIwxFEtSQ13Npd65Nv2JRjgWQ0rqvICQDbgI6m5wR4eNr6qFIH4uG_Lgj39YdUnom3lIqXM7eqO-IXZWMGU9sjB5tVVSwXfyGwZQNvZlSikOtGlzzgIa_6G2UMeKB5ICCX7uKRGnLWUWaqC3e_-TLhdAfcnER-pfcG6Q0sKd7CivQ7nQpunz5R2U4YbgLj25pF5ysRHcrjw71qZcHphAyW6xl_OcLPfMWaC3ZdS4FEBYU2tVq6_d9o-6OQSkb47JciqwfHF1tjHAyD4KTK5S5xesHa3c8hJeY8Ua4ujpdGkt3HiIqmu-VykxuAZDjJd6jRX0tLQ_ChrBNlQhQiFdBEcQj62L7MekP8_t2nehvk46u5rj6ZMJ18=s328-no?authuser=0)"
     this.game.addDirections()
     this.dir()
     this.keydown()

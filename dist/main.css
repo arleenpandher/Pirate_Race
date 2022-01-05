@@ -20,6 +20,21 @@ body {
   border: 1px solid black;
 }
 
+.scorediv {
+  display: inline-block;
+  left: 90%;
+  top: 80%;
+  background-color: goldenrod;
+}
+
+#score {
+  position: absolute;
+  left: 65%;
+  top: 10%;
+  background-color: goldenrod;
+  background-position: center center;
+}
+
 .start-game {
   position: absolute;
   top: 50%;
