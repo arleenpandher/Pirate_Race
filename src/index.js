@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
      let angle = 0
     let stop 
     function loop() {
-        
+            if (stop > 45) return 
             // console.log(angle)
             // flagctx.setTransform(1,0,0,1,0,0)
             flagctx.clearRect(-50,-50, 100, 100)
@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             flagctx.stroke();
             angle += 1
             stop = requestAnimationFrame(loop)
+            console.log(stop)
         
         // requestAnimationFrame(loop)
     }
