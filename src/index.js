@@ -8,48 +8,53 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const ctx = canvas.getContext("2d");
     const flagcanvas = document.getElementById("flag");
     const flagctx = flagcanvas.getContext("2d")
-    flagctx.translate(50,50)
-    flagctx.rotate(0 * (Math.PI / 180));
-    flagctx.beginPath();
-    flagctx.moveTo(0,0);
-    flagctx.lineTo(50,-50);
-    flagctx.lineWidth = 6
-    flagctx.strokeStyle = "red"
-    flagctx.stroke();
+    // flagctx.translate(50,50)
+    // flagctx.rotate(0 * (Math.PI / 180));
+    // flagctx.beginPath();
+    // flagctx.moveTo(0,0);
+    // flagctx.lineTo(50,-50);
+    // flagctx.lineWidth = 6
+    // flagctx.strokeStyle = "red"
+    // flagctx.stroke();
     
-     let angle = 0
-    let stop 
-    function loop() {
-            if (stop > 45) return 
-            // console.log(angle)
-            // flagctx.setTransform(1,0,0,1,0,0)
-            flagctx.clearRect(-50,-50, 100, 100)
-            flagctx.setTransform(1,0,0,1,0,0)
-            flagctx.translate(50,50)
-            flagctx.rotate(angle * (Math.PI / 180));
-            flagctx.beginPath();
-            flagctx.moveTo(0,0);
-            flagctx.lineTo(50,-50);
-            flagctx.lineWidth = 6
-            flagctx.strokeStyle = "red"
-            flagctx.stroke();
-            angle += 1
-            stop = requestAnimationFrame(loop)
-            console.log(stop)
+    // let angle = 0
+    // let stop 
+    // function loop() {
+    //         if (stop > 45) {
+    //             cancelAnimationFrame(45)
+    //             return 
+    //         } 
+    //         flagctx.clearRect(-50,-50, 100, 100)
+    //         flagctx.setTransform(1,0,0,1,0,0)
+    //         flagctx.translate(50,50)
+    //         flagctx.rotate(angle * (Math.PI / 180));
+    //         flagctx.beginPath();
+    //         flagctx.moveTo(0,0);
+    //         flagctx.lineTo(50,-50);
+    //         flagctx.lineWidth = 6
+    //         flagctx.strokeStyle = "red"
+    //         flagctx.stroke();
+    //         angle += 1
+    //         stop = requestAnimationFrame(loop)
+    //         console.log(stop)
         
-        // requestAnimationFrame(loop)
-    }
+    //     // requestAnimationFrame(loop)
+    // }
 
-    loop()
+    // loop()
+
+    // let flag = new Flag()
+    // flag.initialflag(flagctx)
+    // flag.eastFlag(flagctx)
    
 
   
      
     const game = new Game()
-    const gameview = new GameView(ctx, canvas, game)
-    // gameview.dir()
+    const gameview = new GameView(ctx, canvas, game, flagctx)
+    gameview.dir()
     gameview.keydown()
-    gameview.keyup()    
+    // gameview.keyup()    
 
 });
 
