@@ -106,23 +106,23 @@ function westCheck(directioncheck) {
 
 let stop
 function northFlag() {
-    if (stop > 9) {
-        cancelAnimationFrame(9)
-        this.flag.clearRect(-50,-50, 100, 100)
-        this.flag.setTransform(1,0,0,1,0,0)
-        this.flag.translate(50,50)
-        this.flag.rotate(0 * (Math.PI / 180));
-        this.flag.beginPath();
-        this.flag.moveTo(0,0);
-        this.flag.lineTo(50,-50);
-        this.flag.lineWidth = 6
-        this.flag.strokeStyle = "red"
-        this.flag.stroke();
-        console.log(stop)
-        stop = 0
-        console.log(stop)
-        return
-    } 
+    // if (stop > 9) {
+    //     cancelAnimationFrame(9)
+    //     this.flag.clearRect(-50,-50, 100, 100)
+    //     this.flag.setTransform(1,0,0,1,0,0)
+    //     this.flag.translate(50,50)
+    //     this.flag.rotate(0 * (Math.PI / 180));
+    //     this.flag.beginPath();
+    //     this.flag.moveTo(0,0);
+    //     this.flag.lineTo(50,-50);
+    //     this.flag.lineWidth = 6
+    //     this.flag.strokeStyle = "red"
+    //     this.flag.stroke();
+    //     console.log(stop)
+    //     stop = 0
+    //     console.log(stop)
+    //     return
+    // } 
     this.flag.clearRect(-50,-50, 100, 100)
     this.flag.setTransform(1,0,0,1,0,0)
     this.flag.translate(50,50)
@@ -135,11 +135,55 @@ function northFlag() {
     this.flag.stroke();
     this.angle += 5
     stop = requestAnimationFrame(northFlag.bind(this))
+    if (stop > 9) {
+        cancelAnimationFrame(9)
+        this.flag.clearRect(-50,-50, 100, 100)
+        this.flag.setTransform(1,0,0,1,0,0)
+        this.flag.translate(50,50)
+        this.flag.rotate(0 * (Math.PI / 180));
+        this.flag.beginPath();
+        this.flag.moveTo(0,0);
+        this.flag.lineTo(50,-50);
+        this.flag.lineWidth = 6
+        this.flag.strokeStyle = "red"
+        this.flag.stroke();
+        console.log(stop)
+        stop = 0
+        console.log(stop)
+        return
+    } 
     // console.log(stop)
 }
     
  
 function eastFlag() {
+    // if (stop > 9) {
+    //     cancelAnimationFrame(9)
+    //     this.flag.clearRect(-50,-50, 100, 100)
+    //     this.flag.setTransform(1,0,0,1,0,0)
+    //     this.flag.translate(50,50)
+    //     this.flag.rotate(0 * (Math.PI / 180));
+    //     this.flag.beginPath();
+    //     this.flag.moveTo(0,0);
+    //     this.flag.lineTo(50,-50);
+    //     this.flag.lineWidth = 6
+    //     this.flag.strokeStyle = "red"
+    //     this.flag.stroke();
+    //     stop = 0
+    //     return
+    // } 
+    this.flag.clearRect(-50,-50, 100, 100)
+    this.flag.setTransform(1,0,0,1,0,0)
+    this.flag.translate(50,50)
+    this.flag.rotate(this.angle * (Math.PI / 180));
+    this.flag.beginPath();
+    this.flag.moveTo(0,0);
+    this.flag.lineTo(50,-50);
+    this.flag.lineWidth = 6
+    this.flag.strokeStyle = "red"
+    this.flag.stroke();
+    this.angle += 5
+    stop = requestAnimationFrame(eastFlag.bind(this))
     if (stop > 9) {
         cancelAnimationFrame(9)
         this.flag.clearRect(-50,-50, 100, 100)
@@ -155,6 +199,24 @@ function eastFlag() {
         stop = 0
         return
     } 
+}
+
+function southFlag() {
+    // if (stop > 27) {
+    //     cancelAnimationFrame(9)
+    //     this.flag.clearRect(-50,-50, 100, 100)
+    //     this.flag.setTransform(1,0,0,1,0,0)
+    //     this.flag.translate(50,50)
+    //     this.flag.rotate(0 * (Math.PI / 180));
+    //     this.flag.beginPath();
+    //     this.flag.moveTo(0,0);
+    //     this.flag.lineTo(50,-50);
+    //     this.flag.lineWidth = 6
+    //     this.flag.strokeStyle = "red"
+    //     this.flag.stroke();
+    //     stop = 0
+    //     return
+    // } 
     this.flag.clearRect(-50,-50, 100, 100)
     this.flag.setTransform(1,0,0,1,0,0)
     this.flag.translate(50,50)
@@ -166,10 +228,7 @@ function eastFlag() {
     this.flag.strokeStyle = "red"
     this.flag.stroke();
     this.angle += 5
-    stop = requestAnimationFrame(eastFlag.bind(this))
-}
-
-function southFlag() {
+    stop = requestAnimationFrame(southFlag.bind(this))
     if (stop > 27) {
         cancelAnimationFrame(9)
         this.flag.clearRect(-50,-50, 100, 100)
@@ -185,6 +244,24 @@ function southFlag() {
         stop = 0
         return
     } 
+}
+    
+function westFlag() {
+    // if (stop > 45) {
+    //     cancelAnimationFrame(9)
+    //     this.flag.clearRect(-50,-50, 100, 100)
+    //     this.flag.setTransform(1,0,0,1,0,0)
+    //     this.flag.translate(50,50)
+    //     this.flag.rotate(0 * (Math.PI / 180));
+    //     this.flag.beginPath();
+    //     this.flag.moveTo(0,0);
+    //     this.flag.lineTo(50,-50);
+    //     this.flag.lineWidth = 6
+    //     this.flag.strokeStyle = "red"
+    //     this.flag.stroke();
+    //     stop = 0
+    //     return
+    // } 
     this.flag.clearRect(-50,-50, 100, 100)
     this.flag.setTransform(1,0,0,1,0,0)
     this.flag.translate(50,50)
@@ -196,10 +273,7 @@ function southFlag() {
     this.flag.strokeStyle = "red"
     this.flag.stroke();
     this.angle += 5
-    stop = requestAnimationFrame(southFlag.bind(this))
-}
-    
-function westFlag() {
+    stop = requestAnimationFrame(westFlag.bind(this))
     if (stop > 45) {
         cancelAnimationFrame(9)
         this.flag.clearRect(-50,-50, 100, 100)
@@ -215,21 +289,36 @@ function westFlag() {
         stop = 0
         return
     } 
-    this.flag.clearRect(-50,-50, 100, 100)
-    this.flag.setTransform(1,0,0,1,0,0)
-    this.flag.translate(50,50)
-    this.flag.rotate(this.angle * (Math.PI / 180));
-    this.flag.beginPath();
-    this.flag.moveTo(0,0);
-    this.flag.lineTo(50,-50);
-    this.flag.lineWidth = 6
-    this.flag.strokeStyle = "red"
-    this.flag.stroke();
-    this.angle += 5
-    stop = requestAnimationFrame(westFlag.bind(this))
 }
     
-    
+GameView.prototype.instructions = function() {
+    this.drawing.font = "30px Arial";
+    this.drawing.fillStyle = "black"
+    this.drawing.textAlign = "center"
+    this.drawing.fillText("Instructions:", 300, 35)
+    this.drawing.fillText("Ahoy pirates, today we need your help.", 300, 75)
+    this.drawing.fillText("We need to get Oak Island today.", 300, 105)
+    this.drawing.fillText("Our fellow pirate ancestors had hid", 300, 135)
+    this.drawing.fillText("Marie Antoinette's Jewels on this island!", 300, 165)
+    this.drawing.fillText("My directions will appear to you on the", 300, 195)
+    this.drawing.fillText("screen and I need you to press", 300, 225)
+    this.drawing.fillText("the corresponding keyboard buttons.", 300, 255)
+    this.drawing.fillStyle = "red"
+    this.drawing.fillText("(My directions will appear in red).", 300, 285)
+    this.drawing.fillStyle = "black"
+    this.drawing.fillText("However, the other ships also know where", 300, 315)
+    this.drawing.fillText("our ancestoral treasure is hidden.", 300, 345)
+    this.drawing.fillText("They will try to confuse you by yelling", 300, 375)
+    this.drawing.fillText("out the wrong direction ARRGH.", 300, 405)
+    this.drawing.fillStyle = "blue"
+    this.drawing.fillText("(Their directions will appear in blue)", 300, 435)
+    this.drawing.fillStyle = "black"
+    this.drawing.fillText("So when you see their directions I need", 300, 465)
+    this.drawing.fillText("you to travel in the exact opposite", 300, 495)
+    this.drawing.fillText("direction using the keyboard.", 300, 525)
+    this.drawing.fillText("Good luck Matey!", 300, 555)
+}
+
 GameView.prototype.scoredisplay = function() {
     this.drawing.font = "30px Arial";
     this.drawing.fillStyle = "black"

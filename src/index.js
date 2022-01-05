@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const flagcanvas = document.getElementById("flag");
     const flagctx = flagcanvas.getContext("2d")
 
-    ctx.globalCompositeOperation = "lighter"
+  
+    
     // flagctx.translate(50,50)
     // flagctx.rotate(0 * (Math.PI / 180));
     // flagctx.beginPath();
@@ -55,6 +56,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
      
     const game = new Game()
     const gameview = new GameView(ctx, canvas, game, flagctx)
+    gameview.instructions()
     gameview.click()
     // gameview.dir()
     // gameview.keydown()
