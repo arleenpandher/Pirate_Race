@@ -191,8 +191,8 @@ function southFlag() {
 
 let wcounter = 0
 function westFlag() {
-    if (wcounter > 45) {
-        cancelAnimationFrame(9)
+    if (wcounter > 16) {
+        cancelAnimationFrame(16)
         this.flag.clearRect(-50,-50, 100, 100)
         this.flag.setTransform(1,0,0,1,0,0)
         this.flag.translate(50,50)
@@ -210,7 +210,7 @@ function westFlag() {
     this.flag.clearRect(-50,-50, 100, 100)
     this.flag.setTransform(1,0,0,1,0,0)
     this.flag.translate(50,50)
-    this.flag.rotate(this.angle * (Math.PI / 180));
+    this.flag.rotate(-this.angle * (Math.PI / 180));
     this.flag.beginPath();
     this.flag.moveTo(0,0);
     this.flag.lineTo(50,-50);
