@@ -303,7 +303,7 @@ EasyGameView.prototype.end = function() {
         this.flag.clearRect(-50,-50, 100, 100)
     } else {
         this.drawing.clearRect(0, 0, 600, 600)
-        this.canvas.style.backgroundImage = "url('../assets/Lose.png')"
+        this.canvas.style.backgroundImage = "url('./assets/Lose.png')"
         this.drawing.font = "25px Arial";
         this.drawing.fillStyle = "white"
         this.drawing.textAlign = "center"

@@ -284,7 +284,7 @@ HardGameView.prototype.click = function() {
 
 function play() {
     this.drawing.clearRect(0, 0, 600, 600)
-    this.canvas.style.backgroundImage = "url(../assets/gamebackground.png)"
+    this.canvas.style.backgroundImage = "url('./assets/gamebackground.png')"
     this.keydown()
     this.dir()
     setTimeout(this.end.bind(this), 2000*(this.game.directions.length) + 5000)
@@ -294,7 +294,7 @@ function play() {
 HardGameView.prototype.end = function() {
     if (this.game.score > 20) {
         this.drawing.clearRect(0, 0, 600, 600)
-        this.canvas.style.backgroundImage = "url(../assets/Win.png)"
+        this.canvas.style.backgroundImage = "url('./assets/Win.png')"
         this.drawing.font = "25px Arial";
         this.drawing.fillStyle = "black"
         this.drawing.textAlign = "center"
@@ -302,7 +302,7 @@ HardGameView.prototype.end = function() {
         this.flag.clearRect(-50,-50, 100, 100)
     } else {
         this.drawing.clearRect(0, 0, 600, 600)
-        this.canvas.style.backgroundImage = "url(../assets/Lose.png)"
+        this.canvas.style.backgroundImage = "url('./assets/Lose.png')"
         this.drawing.font = "25px Arial";
         this.drawing.fillStyle = "white"
         this.drawing.textAlign = "center"
