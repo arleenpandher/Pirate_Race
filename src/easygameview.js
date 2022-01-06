@@ -292,7 +292,7 @@ function play() {
 }
 
 EasyGameView.prototype.end = function() {
-    if (this.game.score > 35) {
+    if (this.game.score > 50) {
         
         this.drawing.clearRect(0, 0, 600, 600)
         this.canvas.style.backgroundImage = "url('https://lh3.googleusercontent.com/Ru5f8Q7Sku8IoRoSUtaf8znc1MAo4iOaP6rW1FM3TxdYzClcUC9GHwOOYYChSlWSrUCZ1wOF0bn1l4jG_Qi7d0Yhj4N8tnU4n1Ltu4Qed92gDXGncrVmakU4LIeRmn2HANMxgNSr36UQLOUqkw3Ahf3wS39sX4gRre2ZqPiBgNaSDoY8lkdiJMY4599C3A1VUd_Q3u_u_mzZlH50t6FB9BHTGqO4bCvBlBhsJaukgwGdhV0mEv1RR2UxhSnVxZjYZ80VEqUJswd5T1LDVNRkY2QbGiip7xveFVMbax8jDcLqgWfDOXuQZtfaltXkE6JnfR_ebMhLnBa9v_ZxiHl4QPE5Ef3MLpgv1o0m9G8HEIYMuyh4OyZ7SWR_f9lfMqzZqELmXsrk58cZa0GJdbX_Vyeh1xtS6zIly2MfOFC6KhnHIxk1HMZVkcL-p5rtLMZ5eIb2v2dTzNq_eFXig1ETD331f0oLl6bTgxjiBTlDrnrRZwPhJ6T5JPsUP91LW20cBGmmXQVIHwoQlEE17NhfgRTrOvF38dXzlkOHyI3cb7VhQNd-fFCUHq7ZYIfkNfAziiOwBVPLB9zbunliRH9royQaYDrC_cYJoJS_eH1RcztqZJuoDZdi86ufDzf_3dbl6Iaw7jNHcd7BpIlaIHEwaa_nR2myS41rJ6ZUDHAdzq2_dMWRZEbjagX3zY91ZUTMGx5rwoT0tXKbCFH1n6wC0GM=w900-h675-no?authuser=0')"
