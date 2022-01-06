@@ -3,7 +3,7 @@
   \*************************************************************************************************************************************/
 body {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background-image: url(../assets/Backgroundship.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -11,11 +11,8 @@ body {
 }
 
 h1 {
-  position: absolute;
-  top: 0px;
-  left: 620px;
+  text-align: center;
   font-size: 36px;
-  width: 50%;
   color: goldenrod;
 }
 

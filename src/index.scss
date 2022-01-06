@@ -1,6 +1,6 @@
 body {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   // justify-content: center;
     background-image: url(../assets/Backgroundship.png);
     background-repeat: no-repeat;
@@ -9,11 +9,11 @@ body {
   }
 
 h1 {
-  position: absolute;
-  top: 0px;
-  left: 620px;
+  // position: absolute;
+  text-align: center;
+  // transform: translate(-50%, -50%); 
   font-size: 36px;
-  width: 50%;
+  // width: 50%;
   color: goldenrod;
 }
 
