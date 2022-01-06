@@ -26,6 +26,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
     scorecanvas.width= 150 
     scorecanvas.height= 50 
 
+    scorectx.font = "25px Arial";
+    scorectx.fillStyle = "black"
+    scorectx.textAlign = "center"
+    scorectx.fillText(`Score: 0`, 75, 30) 
+
     const easyLevel = document.getElementById("easy");
     const mediumLevel = document.getElementById("medium");
     const hardLevel = document.getElementById("hard");
