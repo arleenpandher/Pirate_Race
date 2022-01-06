@@ -11,19 +11,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const flagctx = flagcanvas.getContext("2d")
     const scorecanvas = document.getElementById("score");
     const scorectx = scorecanvas.getContext("2d")
-
-    // scorectx.fillText("hello",20,20)
    
     const game = new Game()
     const gameview = new GameView(ctx, canvas, game, flagctx, scorectx)
     gameview.instructions()
     gameview.click()
     
- 
-    // gameview.dir()
-    // gameview.keydown()
-    // gameview.keyup()    
-
 });
 
 

@@ -18,13 +18,7 @@ function Game() {
 Game.prototype.addDirections = function() {
     for (i = 0; i < CONSTANTS.NUM_DIRS; i++) {
         let newdir = new Compdirection(this.randomdirectiongenerator(), this.randomtypegenerator())
-        
         this.directions.push(newdir)
-        // if (i !== 0) {
-        //     let lastobj = this.directions[this.directions.length -1]
-        //     // console.log(this.directions[this.directions.length -1].direction)
-        // }
-        // if (this.directions.length === 0 || (newdir.direction !== this.directions[this.directions.length -1].direction)) this.directions.push(newdir)
     }
 }
 
