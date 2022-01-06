@@ -2,6 +2,8 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
 body {
+  display: flex;
+  flex-direction: row;
   background-image: url('https://lh3.googleusercontent.com/4reAcWbFSJ0ZnDVyZohqafjni6wHuCUuvigNqalRr0-BbVh97iNWj4KrKuQp7iWwFAKpIVBVphHztVGNlj_WVnaSCtVJ-MjMvuE4UON0IlIyYZ9HHyGMet9FtBDRmCt9z4GFwtDEspu9YMJNmZLLg52TlR6ylXnULg-j-aySKGgG4_LyuXczBnNZOjnM2PWw7YQ2vrrkFFQ1reM5vk_U8E1H6XvGjsys1p5Kq6QI0BmXNucXTshy4Q1QLK0ufJR0qQUALyoCngSTRHi0b3lgnIg8k7r00n3oJD5521m5TamMne4qwrAPcnyd9_PvY2BdDWE1xUHBVw6370n6U_r_jo1puGIxip-hugGYcfYOOWlb8qb4ligBLRGVlwOp3ZjtvdFbbCHKjIy6fPEhU5uagSUqoo7aVyeJSgj5Ej077NGzq82mekrk8iHmyCjcwkiDAI-MO06V0cAAAEXmnVCKgjy3ih_6Gw6NRQzxWAvv4wfubjHTj7Pw4dRtukO2OAeux6Df8lLNowjGQRnKl_g24GSYaJiw7YjNjTOChpR488GYlMHYnDLO6xV5ulNs58pi0jY8ElddKXGJhntPYKef1RfyRtanIIANXgG41bwSgWjj10TU3akp7me6ZQWsgfp31fWDL4d04AinPxGFIyDKJLuKH-e91IL20PFoDIDBgdVe4ZlHVdbgLszN-j6qjvQEPyiKak2HivGJhn2rCT-56hg=w1677-h943-no?authuser=0"');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -56,19 +58,21 @@ a {
   border: 1px solid black;
 }
 
+#main {
+  height: 400px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: blanchedalmond;
+}
+
 .scorediv {
-  display: inline-block;
-  left: 90%;
-  top: 80%;
   background-color: goldenrod;
 }
 
 #score {
-  position: absolute;
-  left: 65%;
-  top: 10%;
   background-color: goldenrod;
-  background-position: center center;
 }
 
 .start-game {
@@ -94,4 +98,5 @@ a {
 #flag {
   position: absolute;
   background-color: transparent;
+  border: 1px solid black;
 }
