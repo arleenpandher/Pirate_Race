@@ -253,26 +253,21 @@ GameView.prototype.instructions = function() {
     this.drawing.fillStyle = "black"
     this.drawing.textAlign = "center"
     this.drawing.fillText("Instructions:", 300, 35)
-    this.drawing.fillText("Ahoy pirates, we need your help.", 300, 75)
-    this.drawing.fillText("We need to get Oak Island today.", 300, 105)
-    this.drawing.fillText("Our fellow pirate ancestors had hid", 300, 135)
-    this.drawing.fillText("Marie Antoinette's Jewels on this island!", 300, 165)
+    this.drawing.fillText("Ahoy pirates, We need to get Oak Island", 300, 75)
+    this.drawing.fillText("today to recover Marie Antoinette's Jewels.", 300, 105)
     this.drawing.fillText("My directions will appear to you on the", 300, 195)
-    this.drawing.fillText("screen and I need you to press", 300, 225)
-    this.drawing.fillText("the corresponding keyboard buttons.", 300, 255)
+    this.drawing.fillText("screen press the corresponding ", 300, 225)
+    this.drawing.fillText("keyboard buttons.", 300, 255)
     this.drawing.fillStyle = "red"
     this.drawing.fillText("(My directions will appear in red).", 300, 285)
     this.drawing.fillStyle = "black"
-    this.drawing.fillText("However, the other ships also know where", 300, 315)
-    this.drawing.fillText("our ancestoral treasure is hidden.", 300, 345)
-    this.drawing.fillText("They will try to confuse you by yelling", 300, 375)
-    this.drawing.fillText("out the wrong direction ARRGH.", 300, 405)
+    this.drawing.fillText("However, other pirate ships will try", 300, 345)
+    this.drawing.fillText("to confuse you by showing you", 300, 375)
+    this.drawing.fillText("the wrong direction ARRGH.", 300, 405)
+    this.drawing.fillText("Travel in the opposite direction", 300, 435)
     this.drawing.fillStyle = "blue"
-    this.drawing.fillText("(Their directions will appear in blue)", 300, 435)
+    this.drawing.fillText("(Their directions will appear in blue)", 300, 465)
     this.drawing.fillStyle = "black"
-    this.drawing.fillText("So when you see their directions I need", 300, 465)
-    this.drawing.fillText("you to travel in the exact opposite", 300, 495)
-    this.drawing.fillText("direction using the keyboard.", 300, 525)
     this.drawing.fillText("Click on the screen to start.", 300, 555)
     this.drawing.fillText("Good luck Matey!", 300, 585)
 }
