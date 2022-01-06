@@ -279,7 +279,15 @@ a {
 #flag {
   position: absolute;
   background-color: transparent;
-  border: 1px solid black; 
+  // border: 1px solid black; 
+}
+
+input {
+  font-size: 30px;
+  font-family: 'Special Elite', cursive;
+  text-align: center;
+  background-color: silver;
+  border-style:unset;
 }
 
 
