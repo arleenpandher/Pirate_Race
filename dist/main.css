@@ -1,9 +1,11 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Special+Elite&display=swap);
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss (1) ***!
+  \*****************************************************************************************************************************************/
 body {
-  display: flex;
-  flex-direction: column;
   background-image: url(../assets/Backgroundship.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -12,7 +14,9 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 36px;
+  font-size: 44px;
+  font-family: "Special Elite", cursive;
+  top: 20%;
   color: goldenrod;
 }
 
@@ -61,7 +65,13 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: green;
+  background-color: transparent;
+}
+
+#mainparent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .scorediv {

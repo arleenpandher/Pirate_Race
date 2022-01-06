@@ -249,21 +249,22 @@ function westFlag() {
 }
     
 HardGameView.prototype.instructions = function() {
-    this.drawing.font = "30px Arial";
+    this.drawing.font = "28px 'Special Elite', cursive";
     this.drawing.fillStyle = "black"
     this.drawing.textAlign = "center"
-    this.drawing.fillText("Instructions:", 300, 120)
-    this.drawing.fillText("Ahoy pirates, We need to get Oak Island", 300, 150)
-    this.drawing.fillText("today to recover Marie Antoinette's Jewels.", 300, 180)
+    this.drawing.fillText("Instructions:", 300, 50)
+    this.drawing.fillText("Ahoy pirates, We need to get Oak Island", 300, 100)
+    this.drawing.fillText("to recover Marie Antoinette's Jewels.", 300, 130)
     this.drawing.fillStyle = "red"
-    this.drawing.fillText("When directions appear to you in", 300, 220)
-    this.drawing.fillText("red text press the corresponding ", 300, 255)
-    this.drawing.fillText("keyboard buttons as many times as you can.", 300, 285)
+    this.drawing.fillText("When directions appear to you in", 300, 200)
+    this.drawing.fillText("red text press the corresponding ", 300, 230)
+    this.drawing.fillText("keyboard buttons as many.", 300, 260)
+    this.drawing.fillText("times as you can.", 300, 290)
     this.drawing.fillStyle = "blue"
-    this.drawing.fillText("However, other pirate ships will try to confuse", 300, 345)
-    this.drawing.fillText("you by showing you the wrong direction", 300, 375)
-    this.drawing.fillText("ARRGH. Travel in the opposite direction", 300, 405)
-    this.drawing.fillText("as fast as you can.", 300, 435)
+    this.drawing.fillText("However, other pirate ships will", 300, 345)
+    this.drawing.fillText("try to confuse you by showing you the", 300, 375)
+    this.drawing.fillText("wrong direction ARRGH. Travel in the", 300, 405)
+    this.drawing.fillText("opposite direction as fast as you can.", 300, 435)
     this.drawing.fillStyle = "black"
     this.drawing.fillText("Click on the screen to start.", 300, 555)
     this.drawing.fillText("Good luck Matey!", 300, 585)

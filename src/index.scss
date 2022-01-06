@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 body {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   // justify-content: center;
     background-image: url(../assets/Backgroundship.png);
     background-repeat: no-repeat;
@@ -12,7 +13,9 @@ h1 {
   // position: absolute;
   text-align: center;
   // transform: translate(-50%, -50%); 
-  font-size: 36px;
+  font-size: 44px;
+  font-family: 'Special Elite', cursive;
+  top:20%;
   // width: 50%;
   color: goldenrod;
 }
@@ -63,13 +66,22 @@ a {
 }
 
 #main {
+  // display: inline-block;
   height: 400px;
   width: 150px;
+  // top:50%;
+  // left:30%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: green;
+  background-color: transparent;
 
+}
+
+#mainparent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .scorediv {
