@@ -8,7 +8,7 @@ The user wins when they correctly press the buttons corresponding to every direc
 
 In this game, users will be able to: 
 
-1) Start, pause, and restart the game 
+1) Start and restart the game 
 2) Press the four keyboard buttons that correspond to the four directions 
 
 Functionalities of this game include: 

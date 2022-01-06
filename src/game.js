@@ -10,22 +10,24 @@ const CONSTANTS = {
 
 function Game() {
     this.directions = []
-    // this.addDirections()
+    this.addDirections()
     this.score = 0 
-    this.over = true 
+    this.played = false  
 }
 
 Game.prototype.addDirections = function() {
     for (i = 0; i < CONSTANTS.NUM_DIRS; i++) {
         let newdir = new Compdirection(this.randomdirectiongenerator(), this.randomtypegenerator())
         
-        if (i !== 0) {
-            let lastobj = this.directions[this.directions.length -1]
-            console.log(this.directions[this.directions.length -1].direction)
-        }
-        if (this.directions.length === 0 || (newdir.direction !== this.directions[this.directions.length -1].direction)) this.directions.push(newdir)
+        this.directions.push(newdir)
+        // if (i !== 0) {
+        //     let lastobj = this.directions[this.directions.length -1]
+        //     // console.log(this.directions[this.directions.length -1].direction)
+        // }
+        // if (this.directions.length === 0 || (newdir.direction !== this.directions[this.directions.length -1].direction)) this.directions.push(newdir)
     }
 }
+
 
 Game.prototype.randomdirectiongenerator = function() {
     let randomnum = Math.floor(4 * Math.random())
@@ -38,7 +40,8 @@ Game.prototype.randomtypegenerator = function() {
 }
 
 Game.prototype.end = function() {
-    if (this.directions.length !== 0) this.over = false  
+
+
 }
 
 
