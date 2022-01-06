@@ -1,8 +1,7 @@
 body {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  // justify-content: space-between;
+  // justify-content: center;
     background-image: url(../assets/Backgroundship.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -69,7 +68,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: blanchedalmond;
+  background-color: green;
 
 }
 

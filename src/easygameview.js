@@ -284,7 +284,7 @@ EasyGameView.prototype.click = function() {
 
 function play() {
     this.drawing.clearRect(0, 0, 600, 600)
-    this.canvas.style.backgroundImage = "url('../assets/gamebackground.png')"
+    this.canvas.style.backgroundImage = "url('./assets/gamebackground.png')"
     this.keydown()
     this.dir()
     setTimeout(this.end.bind(this), 4000*(this.game.directions.length) + 5000)
@@ -295,7 +295,7 @@ EasyGameView.prototype.end = function() {
     if (this.game.score > 50) {
         
         this.drawing.clearRect(0, 0, 600, 600)
-        this.canvas.style.backgroundImage = "url('../assets/Win.png')"
+        this.canvas.style.backgroundImage = "url('./assets/Win.png')"
         this.drawing.font = "25px Arial";
         this.drawing.fillStyle = "black"
         this.drawing.textAlign = "center"
