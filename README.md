@@ -1,4 +1,4 @@
-# JS-Project
+# Pirate_Race
 
 Pirate's race is a game in which the user is guiding the ship.  One out of the four directions (right, left, up, and down) will appear on the screen in red letters and the user will need to correctly press the corresponding button on the keyboard before time runs out.  However, there are pirates on other ships who are trying to sabotage the user's ship, and sometimes they yell out the opposite directions, which will appear in blue letters on the screen.  The user will need to correctly select the opposite direction when directions appear in blue letter. 
 

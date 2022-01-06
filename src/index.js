@@ -7,11 +7,13 @@ const MediumGame = require("./mediumgame.js");
 const MediumGameView = require("./mediumgameview.js");
 const HardGame = require("./hardgame.js");
 const HardGameView = require("./hardgameview.js");
+import "./index.scss"
 
 
 document.addEventListener('DOMContentLoaded', (event) => {
     
     const canvas = document.getElementById("game-canvas");
+    console.log(canvas)
     const ctx = canvas.getContext("2d");
     const flagcanvas = document.getElementById("flag");
     const flagctx = flagcanvas.getContext("2d")
