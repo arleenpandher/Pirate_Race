@@ -8,6 +8,15 @@ body {
   background-size: 100% 100%;
 }
 
+h1 {
+  position: absolute;
+  top: 0px;
+  left: 620px;
+  font-size: 36px;
+  width: 50%;
+  color: maroon;
+}
+
 #nav-bar {
   position: absolute;
   top: 90%;
@@ -40,6 +49,7 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: gainsboro;
+  background-image: url("https://lh3.googleusercontent.com/JVu_u0gKJCteV6fV21hkEnMcM8HbIgv6eFTT3HpkqHsc9n1bfZaeDGn_ad3A3AkWcApMQgmoEPVTzYisyjGY6FNHiyUamYg3Qqda59ARuQVtly3WhFvCicI3iV107RBpJ2JJA6uc8o87E5Et2X8G-t1bM2tJQZkDkepqFkXmC8dS-SKajBYDGN2ZUTFLiSbvuUiuQjHvf613o1fFdjUA6kDScAxhk9vSWrKcENBP6lHpBWvz2MErMSfRsESkl0g1JwTY-sTni7guvNdfCmn-NoSyEIVGw94syc2TQla_fWc5Ax6529a1P0CA8uE73L32L2MNIH2Dj-Lbhwwn9xj_cOE4bFCdHBSnKXet32PLw72uyWElFc7NKGk6dXHgzqM50WQTHUFdKvVihrgaqrVzCENUfxoyHDi04fUmMHs2-de_K9agefXiJOmTwG5UCZFYULRi_OvG_G4xvBinRrBp_PZOwB479mcWhsruIYDNPNSVefruB-Db6G-FqsrGqVnnqrzlUJowZSniV11YrTrs3Ram7LAfwUfRzViGBmZzntym5INsinvg9MbVyrT-HvjyDohskGp4a6eQOyZKnqnaR_wTgwRBSN-Ewau8NMFWXxhHrACs_G3NGvZ8fcbbeKy3k_vYhUe-ys8hAc_SfBQzeahW2MtpRYaRs0ofHGNLga7IHdPliFvW4Uonfr0z9ck8-NsfBtJdEyEarYI6yUo7POs=w1414-h943-no?authuser=0");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

@@ -282,7 +282,7 @@ GameView.prototype.scoredisplay = function() {
 
 
 GameView.prototype.click = function() {
-    window.addEventListener("click", play.bind(this));
+    this.canvas.addEventListener("click", play.bind(this));
 }
 
 function play() {
