@@ -25,8 +25,8 @@ EasyGameView.prototype.disappear = function() {
 
 EasyGameView.prototype.dir = function() {
     for (i = 0; i < this.game.directions.length; i++) {
-        setTimeout(this.appear.bind(this), 3000+(3000*i) + 1000)
-        setTimeout(this.disappear.bind(this), 6000+(3000*i))
+        setTimeout(this.appear.bind(this), 4000+(4000*i))
+        setTimeout(this.disappear.bind(this), 7000+(4000*i))
         this.flagcounter += 1
     }   
 }
@@ -287,12 +287,12 @@ function play() {
     this.canvas.style.backgroundImage = "url('https://lh3.googleusercontent.com/53-JL9ShR7ceYc9cT956glP2qzyk0sQQa6MOK_k0Jf-_EuoQBOesZdpdFwL7x1igX0aqxundcT32B1m2HTRtRKqKUvUBQsT8JhmXyH_3hHgPbsYWpBORS1JY55lEKbG7SKg8VJKqQLSYS6Hz1ERPejl4ZcJncalAEoABaJx43EpZPPeSmcW_h-qEjZER9KFfPxzTdQZ2DYXv0Q2fIa_b7FNXiMIXiFNA2mNlOvlttf6k4BSPirm69YAO2JvsnnbuRtEHcTqvM27QPRMP_Y5MXijPDGe6cLlaBSLm6Ny6WwmhD2mzQuxpO_N9PZRHmypZ5l5K5-RIurnk3zz54QMDuvU0Amo5ouEr6IIwxFEtSQ13Npd65Nv2JRjgWQ0rqvICQDbgI6m5wR4eNr6qFIH4uG_Lgj39YdUnom3lIqXM7eqO-IXZWMGU9sjB5tVVSwXfyGwZQNvZlSikOtGlzzgIa_6G2UMeKB5ICCX7uKRGnLWUWaqC3e_-TLhdAfcnER-pfcG6Q0sKd7CivQ7nQpunz5R2U4YbgLj25pF5ysRHcrjw71qZcHphAyW6xl_OcLPfMWaC3ZdS4FEBYU2tVq6_d9o-6OQSkb47JciqwfHF1tjHAyD4KTK5S5xesHa3c8hJeY8Ua4ujpdGkt3HiIqmu-VykxuAZDjJd6jRX0tLQ_ChrBNlQhQiFdBEcQj62L7MekP8_t2nehvk46u5rj6ZMJ18=s328-no?authuser=0')"
     this.keydown()
     this.dir()
-    setTimeout(this.end.bind(this), 3000*(this.game.directions.length) + 4000)
+    setTimeout(this.end.bind(this), 4000*(this.game.directions.length) + 2000)
     
 }
 
 EasyGameView.prototype.end = function() {
-    if (this.game.score > 3) {
+    if (this.game.score > 35) {
         this.drawing.clearRect(0, 0, 600, 600)
         this.canvas.style.backgroundImage = "url('https://lh3.googleusercontent.com/Ru5f8Q7Sku8IoRoSUtaf8znc1MAo4iOaP6rW1FM3TxdYzClcUC9GHwOOYYChSlWSrUCZ1wOF0bn1l4jG_Qi7d0Yhj4N8tnU4n1Ltu4Qed92gDXGncrVmakU4LIeRmn2HANMxgNSr36UQLOUqkw3Ahf3wS39sX4gRre2ZqPiBgNaSDoY8lkdiJMY4599C3A1VUd_Q3u_u_mzZlH50t6FB9BHTGqO4bCvBlBhsJaukgwGdhV0mEv1RR2UxhSnVxZjYZ80VEqUJswd5T1LDVNRkY2QbGiip7xveFVMbax8jDcLqgWfDOXuQZtfaltXkE6JnfR_ebMhLnBa9v_ZxiHl4QPE5Ef3MLpgv1o0m9G8HEIYMuyh4OyZ7SWR_f9lfMqzZqELmXsrk58cZa0GJdbX_Vyeh1xtS6zIly2MfOFC6KhnHIxk1HMZVkcL-p5rtLMZ5eIb2v2dTzNq_eFXig1ETD331f0oLl6bTgxjiBTlDrnrRZwPhJ6T5JPsUP91LW20cBGmmXQVIHwoQlEE17NhfgRTrOvF38dXzlkOHyI3cb7VhQNd-fFCUHq7ZYIfkNfAziiOwBVPLB9zbunliRH9royQaYDrC_cYJoJS_eH1RcztqZJuoDZdi86ufDzf_3dbl6Iaw7jNHcd7BpIlaIHEwaa_nR2myS41rJ6ZUDHAdzq2_dMWRZEbjagX3zY91ZUTMGx5rwoT0tXKbCFH1n6wC0GM=w900-h675-no?authuser=0')"
         this.drawing.font = "25px Arial";
