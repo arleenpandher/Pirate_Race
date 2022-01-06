@@ -252,21 +252,18 @@ GameView.prototype.instructions = function() {
     this.drawing.font = "30px Arial";
     this.drawing.fillStyle = "black"
     this.drawing.textAlign = "center"
-    this.drawing.fillText("Instructions:", 300, 35)
-    this.drawing.fillText("Ahoy pirates, We need to get Oak Island", 300, 75)
-    this.drawing.fillText("today to recover Marie Antoinette's Jewels.", 300, 105)
-    this.drawing.fillText("My directions will appear to you on the", 300, 195)
-    this.drawing.fillText("screen press the corresponding ", 300, 225)
-    this.drawing.fillText("keyboard buttons.", 300, 255)
+    this.drawing.fillText("Instructions:", 300, 120)
+    this.drawing.fillText("Ahoy pirates, We need to get Oak Island", 300, 150)
+    this.drawing.fillText("today to recover Marie Antoinette's Jewels.", 300, 180)
     this.drawing.fillStyle = "red"
-    this.drawing.fillText("(My directions will appear in red).", 300, 285)
-    this.drawing.fillStyle = "black"
-    this.drawing.fillText("However, other pirate ships will try", 300, 345)
-    this.drawing.fillText("to confuse you by showing you", 300, 375)
-    this.drawing.fillText("the wrong direction ARRGH.", 300, 405)
-    this.drawing.fillText("Travel in the opposite direction", 300, 435)
+    this.drawing.fillText("When directions appear to you in", 300, 220)
+    this.drawing.fillText("red text press the corresponding ", 300, 255)
+    this.drawing.fillText("keyboard buttons as many times as you can.", 300, 285)
     this.drawing.fillStyle = "blue"
-    this.drawing.fillText("(Their directions will appear in blue)", 300, 465)
+    this.drawing.fillText("However, other pirate ships will try to confuse", 300, 345)
+    this.drawing.fillText("you by showing you the wrong direction", 300, 375)
+    this.drawing.fillText("ARRGH. Travel in the opposite direction", 300, 405)
+    this.drawing.fillText("as fast as you can.", 300, 435)
     this.drawing.fillStyle = "black"
     this.drawing.fillText("Click on the screen to start.", 300, 555)
     this.drawing.fillText("Good luck Matey!", 300, 585)
