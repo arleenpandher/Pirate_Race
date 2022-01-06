@@ -12,7 +12,7 @@ function GameView(ctx, canvas, game, flagctx, scorectx) {
 }
 
 GameView.prototype.appear = function() {
-    this.scoredisplay()
+    // this.scoredisplay()
     let dir = this.game.directions[0]
     dir.display(this.drawing)
 }
@@ -57,16 +57,40 @@ GameView.prototype.keydown = function() {
 function check(key) {
     if (key.keyCode == "38") {
         northFlag.call(this)
-        if (northCheck(this.game.directions[0])) this.game.score += 1
+        if (northCheck(this.game.directions[0])) {
+            this.game.score += 1
+            this.scoredisplay()
+        } else {
+            this.game.score -= 1
+            this.scoredisplay()
+        }
     } else if (key.keyCode == "39") {
         eastFlag.call(this)
-        if (eastCheck(this.game.directions[0])) this.game.score += 1
+        if (eastCheck(this.game.directions[0])) {
+            this.game.score += 1
+            this.scoredisplay()
+        } else {
+            this.game.score -= 1
+            this.scoredisplay()
+        }
     } else if (key.keyCode == "40") {
         southFlag.call(this)
-        if (southCheck(this.game.directions[0])) this.game.score += 1
+        if (southCheck(this.game.directions[0])) {
+            this.game.score += 1
+            this.scoredisplay()
+        } else {
+            this.game.score -= 1
+            this.scoredisplay()
+        }
     } else if (key.keyCode == "37") {
         westFlag.call(this)
-        if (westCheck(this.game.directions[0])) this.game.score += 1
+        if (westCheck(this.game.directions[0])) {
+            this.game.score += 1
+            this.scoredisplay()
+        } else {
+            this.game.score -= 1
+            this.scoredisplay()
+        }
     }   
 }
 
@@ -282,7 +306,7 @@ GameView.prototype.end = function() {
         this.drawing.font = "25px Arial";
         this.drawing.fillStyle = "black"
         this.drawing.textAlign = "center"
-        this.drawing.fillText(`You have won! Score: ${this.game.score}`, 300, 100)  
+        this.drawing.fillText(`Great Job Matey! Score: ${this.game.score}`, 300, 100)  
         this.flag.clearRect(-50,-50, 100, 100)
     } else {
         this.drawing.clearRect(0, 0, 600, 600)
@@ -290,7 +314,7 @@ GameView.prototype.end = function() {
         this.drawing.font = "25px Arial";
         this.drawing.fillStyle = "white"
         this.drawing.textAlign = "center"
-        this.drawing.fillText(`You have lost! Score: ${this.game.score}`, 300, 100) 
+        this.drawing.fillText(`Yikes Matey! Score: ${this.game.score}`, 300, 100) 
         this.flag.clearRect(-50,-50, 100, 100)
     }
 }

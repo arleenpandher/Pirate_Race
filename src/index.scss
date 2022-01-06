@@ -8,6 +8,35 @@ body {
   }
 
 
+#nav-bar {
+  position: absolute;
+  top: 90%;
+  left: 44.5%;
+}
+
+ul {
+  text-align: center;
+  font-size: 25px;
+ 
+}
+
+a {
+  text-decoration: none;
+  color: azure;
+}
+
+.github {
+  color: white;
+  list-style-type: none;
+ 
+}
+
+.linkedin {
+  color: white;
+  list-style-type: none;
+ 
+}
+
 
 #game-canvas {
     position: absolute;
