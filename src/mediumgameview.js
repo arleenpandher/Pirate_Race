@@ -249,7 +249,7 @@ function westFlag() {
 }
     
 MediumGameView.prototype.instructions = function() {
-    this.drawing.font = "28px 'Special Elite', cursive";
+   this.drawing.font = "28px 'Special Elite', cursive";
     this.drawing.fillStyle = "black"
     this.drawing.textAlign = "center"
     this.drawing.fillText("Instructions:", 300, 50)
@@ -296,15 +296,15 @@ MediumGameView.prototype.end = function() {
     if (this.game.score > 55) {
         this.drawing.clearRect(0, 0, 600, 600)
         this.canvas.style.backgroundImage = "url('./assets/Win.png')"
-        this.drawing.font = "25px Arial";
-        this.drawing.fillStyle = "black"
+        this.drawing.font = "28px 'Special Elite', cursive";
+        this.drawing.fillStyle = "red"
         this.drawing.textAlign = "center"
         this.drawing.fillText(`Great Job Matey! Score: ${this.game.score}`, 300, 100)  
         this.flag.clearRect(-50,-50, 100, 100)
     } else {
         this.drawing.clearRect(0, 0, 600, 600)
         this.canvas.style.backgroundImage = "url('./assets/Lose.png')"
-        this.drawing.font = "25px Arial";
+        this.drawing.font = "28px 'Special Elite', cursive";
         this.drawing.fillStyle = "white"
         this.drawing.textAlign = "center"
         this.drawing.fillText(`Yikes Matey! Score: ${this.game.score}`, 300, 100) 

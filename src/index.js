@@ -15,10 +15,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const canvas = document.getElementById("game-canvas");
     console.log(canvas)
     const ctx = canvas.getContext("2d");
+    canvas.width= 600 
+    canvas.height= 600 
     const flagcanvas = document.getElementById("flag");
+    flagcanvas.width= 100 
+    flagcanvas.height= 100 
     const flagctx = flagcanvas.getContext("2d")
     const scorecanvas = document.getElementById("score");
     const scorectx = scorecanvas.getContext("2d")
+    scorecanvas.width= 150 
+    scorecanvas.height= 50 
 
     const easyLevel = document.getElementById("easy");
     const mediumLevel = document.getElementById("medium");
