@@ -47,3 +47,6 @@ NB:
 4) Tuesday: Finish implementing the user controls and move on to working on the styling and implementing the nav links 
 
 5) Wednesday & Thursday: Correct any last minute mistakes, and deploy to GitHub pages. 
+
+##### Live Link
+https://arleenpandher.github.io/Pirate_Race/
