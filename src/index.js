@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     function easycheck() {
         const easygame = new EasyGame()
-        const easygameview = new EasyGameView(ctx, canvas, easygame, flagctx, scorectx, img1, img2)
+        const easygameview = new EasyGameView(ctx, canvas, easygame, flagctx, scorectx, img1, img2, "easy")
         easygameview.instructions()
         easygameview.click()
         
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     function mediumcheck() {
         const mediumgame = new MediumGame()
-        const mediumgameview = new MediumGameView(ctx, canvas, mediumgame, flagctx, scorectx)
+        const mediumgameview = new EasyGameView(ctx, canvas, mediumgame, flagctx, scorectx, img1, img2, "medium")
         mediumgameview.instructions()
         mediumgameview.click() 
     }
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     function hardcheck() {
         const hardgame = new HardGame()
-        const hardgameview = new HardGameView(ctx, canvas, hardgame, flagctx, scorectx)
+        const hardgameview = new EasyGameView(ctx, canvas, hardgame, flagctx, scorectx, img1, img2, "hard")
         hardgameview.instructions()
         hardgameview.click() 
     }

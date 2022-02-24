@@ -2,7 +2,7 @@ const Compdirection = require("./compdirection.js")
 
 const CONSTANTS = {
     DIRECTIONS: ["North", "South", "East", "West"],
-    NUM_DIRS: 10,
+    NUM_DIRS: 4,
     DIM_X: 600,
     DIM_Y: 600,
     COLOR: ["red", "blue"]

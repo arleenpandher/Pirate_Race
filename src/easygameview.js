@@ -1,7 +1,7 @@
 const EasyGame = require("./easygame.js");
 
 
-function EasyGameView(ctx, canvas, game, flagctx, scorectx, img1, img2) {
+function EasyGameView(ctx, canvas, game, flagctx, scorectx, img1, img2, type) {
     this.game = game
     this.drawing = ctx 
     this.canvas = canvas
@@ -12,6 +12,7 @@ function EasyGameView(ctx, canvas, game, flagctx, scorectx, img1, img2) {
     this.endgame = false
     this.img1 = img1
     this.img2 = img2
+    this.type = type
 }
 
 EasyGameView.prototype.appear = function() {
@@ -27,11 +28,25 @@ EasyGameView.prototype.disappear = function() {
 }
 
 EasyGameView.prototype.dir = function() {
-    for (i = 0; i < this.game.directions.length; i++) {
-        setTimeout(this.appear.bind(this), 4000+(4000*i))
-        setTimeout(this.disappear.bind(this), 7000+(4000*i))
-        this.flagcounter += 1
-        console.log(this.game.directions.length)
+    if (this.type === "easy") {
+        for (i = 0; i < this.game.directions.length; i++) {
+            setTimeout(this.appear.bind(this), 4000+(4000*i))
+            setTimeout(this.disappear.bind(this), 7000+(4000*i))
+            this.flagcounter += 1
+            console.log(this.game.directions.length)
+        }
+    } else if (this.type === "medium") {
+        for (i = 0; i < this.game.directions.length; i++) {
+            setTimeout(this.appear.bind(this), 3000+(3000*i) + 1000)
+            setTimeout(this.disappear.bind(this), 6000+(3000*i))
+            this.flagcounter += 1
+        }   
+    } else {
+        for (i = 0; i < this.game.directions.length; i++) {
+            setTimeout(this.appear.bind(this), 4000+(2000*i))
+            setTimeout(this.disappear.bind(this), 5000+(2000*i))
+            this.flagcounter += 1
+        }   
     }
 }
 
@@ -307,8 +322,13 @@ function play() {
     this.canvas.style.backgroundImage = "url('./assets/gamebackground.png')"
     this.keydown()
     this.dir()
-    setTimeout(this.end.bind(this), 4000*(this.game.directions.length) + 5000)
-    // setTimeout(remove, 4000*(this.game.directions.length) + 5000)
+    if (this.type === "easy") {
+        setTimeout(this.end.bind(this), 4000*(this.game.directions.length) + 5000)
+    } else if (this.type === "medium") {
+        setTimeout(this.end.bind(this), 3000*(this.game.directions.length) + 4000)
+    } else {
+        setTimeout(this.end.bind(this), 2000*(this.game.directions.length) + 5000)
+    }
 }
 
 function remove() {
@@ -326,7 +346,10 @@ function remove() {
 
 
 EasyGameView.prototype.end = function() {
-    if (this.game.score > 50) {
+    if ((this.type === "easy" && this.game.score > 50) ||
+    (this.type === "medium" && this.game.score > 55) ||
+    (this.type === "hard" && this.game.score > 2)
+    ) {
         
         this.drawing.clearRect(0, 0, 600, 600)
         this.canvas.style.backgroundImage = "url('./assets/Win.png')"
