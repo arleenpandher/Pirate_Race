@@ -7,6 +7,7 @@ const MediumGame = require("./mediumgame.js");
 const MediumGameView = require("./mediumgameview.js");
 const HardGame = require("./hardgame.js");
 const HardGameView = require("./hardgameview.js");
+const RestartGame = require("./restart.js")
 import "./index.scss"
 
 
@@ -34,6 +35,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const easyLevel = document.getElementById("easy");
     const mediumLevel = document.getElementById("medium");
     const hardLevel = document.getElementById("hard");
+    // const restart = document.getElementById("restart")
+    // restart.addEventListener("click", restartcheck)
+
+    // function restartcheck() {
+    //     const restartgame = new RestartGame(ctx, canvas, flagctx, scorectx)
+    //     easyLevel.addEventListener("click", easycheck)
+
+    //     function easycheck() {
+    //     const easygame = new EasyGame()
+    //     const easygameview = new EasyGameView(ctx, canvas, easygame, flagctx, scorectx)
+    //     easygameview.instructions()
+    //     easygameview.click() 
+    //     }
+    // }
     
     easyLevel.addEventListener("click", easycheck)
 
@@ -41,7 +56,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const easygame = new EasyGame()
         const easygameview = new EasyGameView(ctx, canvas, easygame, flagctx, scorectx)
         easygameview.instructions()
-        easygameview.click() 
+        easygameview.click()
+        
+        // restart.addEventListener("click", restartcheck) 
+
+        // function restartcheck() {
+        //     const restartgame = new RestartGame(ctx, canvas, easygame, flagctx, scorectx)
+        // }
     }
 
     mediumLevel.addEventListener("click", mediumcheck) 

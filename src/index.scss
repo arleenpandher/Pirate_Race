@@ -282,13 +282,17 @@ a {
   // border: 1px solid black; 
 }
 
-input {
+input, #restart {
   font-size: 30px;
   font-family: 'Special Elite', cursive;
   text-align: center;
   background-color: silver;
   border-style:unset;
+  padding:0.5rem;
+  color:black
 }
+
+
 
 
 
