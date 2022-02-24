@@ -25,7 +25,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const scorecanvas = document.getElementById("score");
     const scorectx = scorecanvas.getContext("2d")
     scorecanvas.width= 150 
-    scorecanvas.height= 50 
+    scorecanvas.height= 50
+    var img1 = new Image()
+    img1.src = "./assets/instructionspic1.png"
+    var img2 = new Image()
+    img2.src = "./assets/instructionspic2.png"
 
     scorectx.font = "25px Arial";
     scorectx.fillStyle = "black"
@@ -54,7 +58,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     function easycheck() {
         const easygame = new EasyGame()
-        const easygameview = new EasyGameView(ctx, canvas, easygame, flagctx, scorectx)
+        const easygameview = new EasyGameView(ctx, canvas, easygame, flagctx, scorectx, img1, img2)
         easygameview.instructions()
         easygameview.click()
         

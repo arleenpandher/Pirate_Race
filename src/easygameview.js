@@ -1,7 +1,7 @@
 const EasyGame = require("./easygame.js");
 
 
-function EasyGameView(ctx, canvas, game, flagctx, scorectx) {
+function EasyGameView(ctx, canvas, game, flagctx, scorectx, img1, img2) {
     this.game = game
     this.drawing = ctx 
     this.canvas = canvas
@@ -10,6 +10,8 @@ function EasyGameView(ctx, canvas, game, flagctx, scorectx) {
     this.score = scorectx
     this.flagcounter = 0
     this.endgame = false
+    this.img1 = img1
+    this.img2 = img2
 }
 
 EasyGameView.prototype.appear = function() {
@@ -260,22 +262,28 @@ function westFlag() {
 }
     
 EasyGameView.prototype.instructions = function() {
-    this.drawing.font = "28px 'Special Elite', cursive";
+    var img1 = new Image()
+    img1.src = "../assets/instructionspic1.png"
+    this.drawing.font = "20px 'Special Elite', cursive";
+    // this.drawing.fontWeight = "800"
     this.drawing.fillStyle = "black"
     this.drawing.textAlign = "center"
     this.drawing.fillText("Instructions:", 300, 50)
-    this.drawing.fillText("Ahoy pirates, We need to get Oak Island", 300, 100)
-    this.drawing.fillText("to recover Marie Antoinette's Jewels.", 300, 130)
+    this.drawing.font = "15.5px 'Special Elite', cursive";
+    this.drawing.fillText("Ahoy pirates, we will recover Mariew Antoinette's Jewels from Oak Island", 300, 80)
     this.drawing.fillStyle = "red"
-    this.drawing.fillText("When directions appear to you in", 300, 200)
-    this.drawing.fillText("red text press the corresponding ", 300, 230)
-    this.drawing.fillText("keyboard buttons as many.", 300, 260)
-    this.drawing.fillText("times as you can.", 300, 290)
+    this.drawing.font = "24px 'Special Elite', cursive";
+    this.drawing.fillText("When directions appear in red text press the ", 300, 125)
+    this.drawing.fillText("corresponding keyboard buttons as many times", 300, 155)
+    // this.drawing.fillText("", 300, 260)
+    // this.drawing.fillText("times as you can.", 300, 290)
+    this.drawing.drawImage(this.img1, 200, 157, 200, 150)
     this.drawing.fillStyle = "blue"
-    this.drawing.fillText("However, other pirate ships will", 300, 345)
-    this.drawing.fillText("try to confuse you by showing you the", 300, 375)
-    this.drawing.fillText("wrong direction ARRGH. Travel in the", 300, 405)
-    this.drawing.fillText("opposite direction as fast as you can.", 300, 435)
+    this.drawing.font = "24px 'Special Elite', cursive";
+    this.drawing.fillText("Other pirate ships will try to confuse you by", 300, 315)
+    this.drawing.fillText("showing the wrong direction ARGH. When you see", 300, 345)
+    this.drawing.fillText("blue text travel in the opposite direction.", 300, 375)
+    this.drawing.drawImage(this.img2, 200, 377, 200, 150)
     this.drawing.fillStyle = "black"
     this.drawing.fillText("Click on the screen to start.", 300, 555)
     this.drawing.fillText("Good luck Matey!", 300, 585)
