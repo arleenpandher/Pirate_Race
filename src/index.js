@@ -1,13 +1,9 @@
 const Compdirection = require("./compdirection.js")
 const Game = require("./game.js");
-const GameView = require("./gameview.js");
 const EasyGame = require("./easygame.js");
-const EasyGameView = require("./easygameview.js");
+const GameView = require("./gameview.js");
 const MediumGame = require("./mediumgame.js");
-const MediumGameView = require("./mediumgameview.js");
 const HardGame = require("./hardgame.js");
-const HardGameView = require("./hardgameview.js");
-const RestartGame = require("./restart.js")
 import "./index.scss"
 
 
@@ -39,41 +35,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const easyLevel = document.getElementById("easy");
     const mediumLevel = document.getElementById("medium");
     const hardLevel = document.getElementById("hard");
-    // const restart = document.getElementById("restart")
-    // restart.addEventListener("click", restartcheck)
-
-    // function restartcheck() {
-    //     const restartgame = new RestartGame(ctx, canvas, flagctx, scorectx)
-    //     easyLevel.addEventListener("click", easycheck)
-
-    //     function easycheck() {
-    //     const easygame = new EasyGame()
-    //     const easygameview = new EasyGameView(ctx, canvas, easygame, flagctx, scorectx)
-    //     easygameview.instructions()
-    //     easygameview.click() 
-    //     }
-    // }
+  
     
     easyLevel.addEventListener("click", easycheck)
 
     function easycheck() {
         const easygame = new EasyGame()
-        const easygameview = new EasyGameView(ctx, canvas, easygame, flagctx, scorectx, img1, img2, "easy")
+        const easygameview = new GameView(ctx, canvas, easygame, flagctx, scorectx, img1, img2, "easy")
         easygameview.instructions()
         easygameview.click()
-        
-        // restart.addEventListener("click", restartcheck) 
-
-        // function restartcheck() {
-        //     const restartgame = new RestartGame(ctx, canvas, easygame, flagctx, scorectx)
-        // }
     }
 
     mediumLevel.addEventListener("click", mediumcheck) 
 
     function mediumcheck() {
         const mediumgame = new MediumGame()
-        const mediumgameview = new EasyGameView(ctx, canvas, mediumgame, flagctx, scorectx, img1, img2, "medium")
+        const mediumgameview = new GameView(ctx, canvas, mediumgame, flagctx, scorectx, img1, img2, "medium")
         mediumgameview.instructions()
         mediumgameview.click() 
     }
@@ -82,7 +59,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     function hardcheck() {
         const hardgame = new HardGame()
-        const hardgameview = new EasyGameView(ctx, canvas, hardgame, flagctx, scorectx, img1, img2, "hard")
+        const hardgameview = new GameView(ctx, canvas, hardgame, flagctx, scorectx, img1, img2, "hard")
         hardgameview.instructions()
         hardgameview.click() 
     }
