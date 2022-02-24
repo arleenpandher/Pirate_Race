@@ -1,4 +1,4 @@
-const EasyGame = require("./easygame.js");
+const EasyGame = require("./game.js");
 
 
 function GameView(ctx, canvas, game, flagctx, scorectx, img1, img2, type) {

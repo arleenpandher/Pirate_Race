@@ -1,6 +1,5 @@
 const Compdirection = require("./compdirection.js")
 const Game = require("./game.js");
-const EasyGame = require("./easygame.js");
 const GameView = require("./gameview.js");
 const MediumGame = require("./mediumgame.js");
 const HardGame = require("./hardgame.js");
@@ -40,7 +39,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     easyLevel.addEventListener("click", easycheck)
 
     function easycheck() {
-        const easygame = new EasyGame()
+        const easygame = new Game("easy")
         const easygameview = new GameView(ctx, canvas, easygame, flagctx, scorectx, img1, img2, "easy")
         easygameview.instructions()
         easygameview.click()
@@ -49,7 +48,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     mediumLevel.addEventListener("click", mediumcheck) 
 
     function mediumcheck() {
-        const mediumgame = new MediumGame()
+        const mediumgame = new Game("medium")
         const mediumgameview = new GameView(ctx, canvas, mediumgame, flagctx, scorectx, img1, img2, "medium")
         mediumgameview.instructions()
         mediumgameview.click() 
@@ -58,26 +57,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     hardLevel.addEventListener("click", hardcheck) 
 
     function hardcheck() {
-        const hardgame = new HardGame()
+        const hardgame = new Game("hard")
         const hardgameview = new GameView(ctx, canvas, hardgame, flagctx, scorectx, img1, img2, "hard")
         hardgameview.instructions()
         hardgameview.click() 
     }
    
-
-
-    // const game = new Game()
-    // const gameview = new GameView(ctx, canvas, game, flagctx, scorectx)
-    // gameview.instructions()
-    // gameview.click()
-
-    // const easygame = new EasyGame()
-    // const easygameview = new EasyGameView(ctx, canvas, easygame, flagctx, scorectx)
-    // easygameview.instructions()
-    // easygameview.click() 
-
-        
-
 });
 
 
