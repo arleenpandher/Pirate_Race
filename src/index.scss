@@ -227,7 +227,7 @@ h1 {
   left:75%;
   // top: 90%;
   // left: 44.5%;
-  background-image: url(../assets/Instructions.png);
+  background-image: url(../assets/blank.png);
   align-self: center;
 }
 
@@ -244,8 +244,12 @@ a {
 
 img {
   height:100px;
-  width:100px;
+  width:150px;
   padding: 2rem;
+}
+
+#github {
+  width:150px;
 }
 
 .github {
