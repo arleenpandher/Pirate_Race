@@ -343,6 +343,7 @@ GameView.prototype.click = function() {
 }
 
 function play() {
+    // this.canvas.removeEventListener("click", play.bind(this));
     this.drawing.clearRect(0, 0, 600, 600)
     this.canvas.style.backgroundImage = "url('./assets/gamebackground.png')"
     this.keydown()
@@ -356,9 +357,6 @@ function play() {
     }
 }
 
-function remove() {
-    window.removeEventListener("keydown", check.bind(this))
-}
 
 // EasyGameView.prototype.end = function() {
 //     if (this.game.directions.length === 0) {
@@ -384,7 +382,9 @@ GameView.prototype.end = function() {
         this.drawing.fillText(`Great Job Matey!`, 300, 100)
         this.drawing.fillText(`Final Score: ${this.game.score}`, 300, 130)
         this.drawing.fillStyle = "white"
-        this.drawing.fillText(`Press Restart to Play Again`, 300, 400)    
+        this.drawing.font = "50px 'Special Elite', cursive";
+        this.drawing.fillText(`Press the RESTART`, 300, 210)
+        this.drawing.fillText(`button to Play Again`, 300, 250)   
         this.flag.clearRect(-50,-50, 100, 100)
     } else {
         this.drawing.clearRect(0, 0, 600, 600)
@@ -395,7 +395,9 @@ GameView.prototype.end = function() {
         this.drawing.fillText(`Yikes Matey!`, 300, 100)
         this.drawing.fillText(`Final Score: ${this.game.score}`, 300, 130)
         this.drawing.fillStyle = "white"
-        this.drawing.fillText(`Press Restart to Play Again`, 300, 420)  
+        this.drawing.font = "50px 'Special Elite', cursive";
+        this.drawing.fillText(`Press the RESTART`, 300, 210)
+        this.drawing.fillText(`button to Play Again`, 300, 250)
         this.flag.clearRect(-50,-50, 100, 100)
     }
 }
