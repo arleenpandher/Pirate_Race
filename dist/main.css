@@ -190,6 +190,7 @@ input, #restart {
   font-size: 30px;
   font-family: "Special Elite", cursive;
   text-align: center;
+  border-radius: 15px;
   background-color: #cfc9c9;
   border-style: unset;
   padding: 0.5rem;
