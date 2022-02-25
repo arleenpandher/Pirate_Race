@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     img1.src = "./assets/instructionspic1.png"
     var img2 = new Image()
     img2.src = "./assets/instructionspic2.png"
+    let click = 0 
 
     scorectx.font = "25px Arial";
     scorectx.fillStyle = "black"
@@ -35,32 +36,47 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const mediumLevel = document.getElementById("medium");
     const hardLevel = document.getElementById("hard");
   
+    if (click === 0) {
+        easyLevel.addEventListener("click", easycheck)
+        mediumLevel.addEventListener("click", mediumcheck)
+        hardLevel.addEventListener("click", hardcheck)
+        console.log("Entered") 
+    }
+
+    function removebuttons() {
+        easyLevel.removeEventListener("click", easycheck)
+        mediumLevel.removeEventListener("click", mediumcheck)
+        hardLevel.removeEventListener("click", hardcheck) 
+    }
     
-    easyLevel.addEventListener("click", easycheck)
+    
 
     function easycheck() {
         const easygame = new Game("easy")
         const easygameview = new GameView(ctx, canvas, easygame, flagctx, scorectx, img1, img2, "easy")
         easygameview.instructions()
         easygameview.click()
+        removebuttons()
     }
 
-    mediumLevel.addEventListener("click", mediumcheck) 
+    
 
     function mediumcheck() {
         const mediumgame = new Game("medium")
         const mediumgameview = new GameView(ctx, canvas, mediumgame, flagctx, scorectx, img1, img2, "medium")
         mediumgameview.instructions()
         mediumgameview.click() 
+        removebuttons()
     }
 
-    hardLevel.addEventListener("click", hardcheck) 
+    
 
     function hardcheck() {
         const hardgame = new Game("hard")
         const hardgameview = new GameView(ctx, canvas, hardgame, flagctx, scorectx, img1, img2, "hard")
         hardgameview.instructions()
         hardgameview.click() 
+        removebuttons()
     }
    
 });
