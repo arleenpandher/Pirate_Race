@@ -157,8 +157,7 @@ function northFlag() {
         this.flag.lineTo(42,-42);
         this.flag.lineTo(42,0)
         this.flag.lineTo(20,-20)
-        this.flag.lineTo(38,-40)
-        this.flag.lineWidth = 2.5
+        this.flag.lineWidth =  2.5
         this.flag.strokeStyle = "red"
         this.flag.stroke();
         this.angle = 0
@@ -169,15 +168,20 @@ function northFlag() {
     this.flag.setTransform(1,0,0,1,0,0)
     this.flag.translate(50,50)
     this.flag.rotate(-this.angle * (Math.PI / 180));
-    this.flag.beginPath();
-    this.flag.moveTo(0,0);
-    this.flag.lineTo(42,-42);
+
+    this.flag.beginPath()
+    this.flag.moveTo(20,-20)
     this.flag.lineTo(42,0)
-    this.flag.lineTo(20,-20)
-    this.flag.lineTo(38,-40)
-    this.flag.lineWidth =  2.5
-    this.flag.strokeStyle = "red"
-    this.flag.stroke();
+    this.flag.lineTo(42,-42)
+    this.flag.closePath()
+    this.flag.beginPath();
+        this.flag.moveTo(0,0);
+        this.flag.lineTo(42,-42);
+        this.flag.lineTo(42,0)
+        this.flag.lineTo(20,-20)
+        this.flag.lineWidth =  2.5
+        this.flag.strokeStyle = "red"
+        this.flag.stroke();
     this.angle += 5
     ncounter += 1
     stop = requestAnimationFrame(northFlag.bind(this))
@@ -270,7 +274,6 @@ function westFlag() {
         this.flag.lineTo(42,-42);
         this.flag.lineTo(42,0)
         this.flag.lineTo(20,-20)
-        this.flag.lineTo(42,-20)
         this.flag.lineWidth =  2.5
         this.flag.strokeStyle = "red"
         this.flag.stroke();
@@ -287,7 +290,6 @@ function westFlag() {
     this.flag.lineTo(42,-42);
     this.flag.lineTo(42,0)
     this.flag.lineTo(20,-20)
-    this.flag.lineTo(42,-20)
     this.flag.lineWidth =  2.5
     // this.flag.fillStyle = "red"
     this.flag.strokeStyle = "red"
