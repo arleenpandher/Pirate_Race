@@ -34,19 +34,7 @@ This project will be implemented with the following technologies:
 2) Webpack and Babel to bundle and transpile the source JavaScript code 
 3) npm to manage project dependencies 
 
-##### Implementation Timeline 
 
-NB: 
-
-1) Thursday Afternoon & Friday: Setup project, including getting webpack up and running.  Get canvas to show up on the screen.  Create the Game and Flag class.  Get the background to render. 
-
-2) Weekend: Implement the underlying logic of the Pirate race game.  Ensure I can get the directions, and score to render on the screen.  
-
-3) Monday: Ensure all the different pieces are rendering correctly, this includes the background and the directions that appear on the screen 
-
-4) Tuesday: Finish implementing the user controls and move on to working on the styling and implementing the nav links 
-
-5) Wednesday & Thursday: Correct any last minute mistakes, and deploy to GitHub pages. 
 
 ##### Live Link
 https://arleenpandher.github.io/Pirate_Race/
