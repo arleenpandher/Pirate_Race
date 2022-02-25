@@ -381,7 +381,9 @@ GameView.prototype.end = function() {
         this.drawing.fillStyle = "red"
         this.drawing.textAlign = "center"
         this.drawing.fillText(`Great Job Matey!`, 300, 100)
-        this.drawing.fillText(`Final Score: ${this.game.score}`, 300, 130)  
+        this.drawing.fillText(`Final Score: ${this.game.score}`, 300, 130)
+        this.drawing.fillStyle = "white"
+        this.drawing.fillText(`Press Restart to Play Again`, 300, 400)    
         this.flag.clearRect(-50,-50, 100, 100)
     } else {
         this.drawing.clearRect(0, 0, 600, 600)
@@ -390,7 +392,9 @@ GameView.prototype.end = function() {
         this.drawing.fillStyle = "white"
         this.drawing.textAlign = "center"
         this.drawing.fillText(`Yikes Matey!`, 300, 100)
-        this.drawing.fillText(`Final Score: ${this.game.score}`, 300, 130)   
+        this.drawing.fillText(`Final Score: ${this.game.score}`, 300, 130)
+        this.drawing.fillStyle = "white"
+        this.drawing.fillText(`Press Restart to Play Again`, 300, 420)  
         this.flag.clearRect(-50,-50, 100, 100)
     }
 }

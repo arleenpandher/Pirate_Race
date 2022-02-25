@@ -318,18 +318,18 @@ img {
 }
 
 .start-game {
-  // position: absolute;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%); 
-  width:602px;
-  margin:auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  // width:602px;
+  // margin:auto;
 }
 
 
 
 #child1 {
-  position: relative;
+  position: absolute;
   top: 190px;
   left: -15px;
   
