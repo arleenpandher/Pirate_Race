@@ -13,9 +13,9 @@ const CONSTANTS = {
 function Game(type) {
     this.type = type
     this.directions = []
-    if (this.type === "easy") this.num_dirs = 3
-    if (this.type === "medium") this.num_dirs = 4
-    if (this.type === "hard") this.num_dirs = 5  
+    if (this.type === "easy") this.num_dirs = 5
+    if (this.type === "medium") this.num_dirs = 10
+    if (this.type === "hard") this.num_dirs = 15  
     this.addDirections()
     this.score = 0 
     this.played = false    
