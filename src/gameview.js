@@ -303,6 +303,7 @@ function westFlag() {
 GameView.prototype.instructions = function() {
     var img1 = new Image()
     img1.src = "../assets/instructionspic1.png"
+    this.canvas.style.backgroundImage = "url('./assets/blankinstructions.png')"
     this.drawing.font = "20px 'Special Elite', cursive";
     // this.drawing.fontWeight = "800"
     this.drawing.fillStyle = "black"

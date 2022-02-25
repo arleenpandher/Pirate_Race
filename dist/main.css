@@ -91,6 +91,15 @@ ul {
   font-size: 25px;
 }
 
+input {
+  cursor: pointer;
+}
+
+input:active {
+  background-color: #c5c4c4;
+  box-shadow: inset 0px 0px 10px #1a1919;
+}
+
 a {
   text-decoration: none;
   color: azure;
@@ -102,8 +111,10 @@ img {
   padding: 2rem;
 }
 
-#github {
-  width: 150px;
+#linkedin {
+  height: 150px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .github {
@@ -179,7 +190,7 @@ input, #restart {
   font-size: 30px;
   font-family: "Special Elite", cursive;
   text-align: center;
-  background-color: silver;
+  background-color: #cfc9c9;
   border-style: unset;
   padding: 0.5rem;
   color: black;
