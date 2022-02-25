@@ -154,8 +154,11 @@ function northFlag() {
         this.flag.rotate(0 * (Math.PI / 180));
         this.flag.beginPath();
         this.flag.moveTo(0,0);
-        this.flag.lineTo(50,-50);
-        this.flag.lineWidth = 6
+        this.flag.lineTo(42,-42);
+        this.flag.lineTo(42,0)
+        this.flag.lineTo(20,-20)
+        this.flag.lineTo(38,-40)
+        this.flag.lineWidth = 2.5
         this.flag.strokeStyle = "red"
         this.flag.stroke();
         this.angle = 0
@@ -168,8 +171,11 @@ function northFlag() {
     this.flag.rotate(-this.angle * (Math.PI / 180));
     this.flag.beginPath();
     this.flag.moveTo(0,0);
-    this.flag.lineTo(50,-50);
-    this.flag.lineWidth = 6
+    this.flag.lineTo(42,-42);
+    this.flag.lineTo(42,0)
+    this.flag.lineTo(20,-20)
+    this.flag.lineTo(38,-40)
+    this.flag.lineWidth =  2.5
     this.flag.strokeStyle = "red"
     this.flag.stroke();
     this.angle += 5
@@ -187,8 +193,10 @@ function eastFlag() {
         this.flag.rotate(0 * (Math.PI / 180));
         this.flag.beginPath();
         this.flag.moveTo(0,0);
-        this.flag.lineTo(50,-50);
-        this.flag.lineWidth = 6
+        this.flag.lineTo(42,-42);
+        this.flag.lineTo(42,0)
+        this.flag.lineTo(20,-20)
+        this.flag.lineWidth =  2.5
         this.flag.strokeStyle = "red"
         this.flag.stroke();
         this.angle = 0
@@ -201,8 +209,10 @@ function eastFlag() {
     this.flag.rotate(this.angle * (Math.PI / 180));
     this.flag.beginPath();
     this.flag.moveTo(0,0);
-    this.flag.lineTo(50,-50);
-    this.flag.lineWidth = 6
+    this.flag.lineTo(42,-42);
+    this.flag.lineTo(42,0)
+    this.flag.lineTo(20,-20)
+    this.flag.lineWidth =  2.5
     this.flag.strokeStyle = "red"
     this.flag.stroke();
     this.angle += 5
@@ -220,8 +230,10 @@ function southFlag() {
         this.flag.rotate(0 * (Math.PI / 180));
         this.flag.beginPath();
         this.flag.moveTo(0,0);
-        this.flag.lineTo(50,-50);
-        this.flag.lineWidth = 6
+        this.flag.lineTo(42,-42);
+        this.flag.lineTo(42,0)
+        this.flag.lineTo(20,-20)
+        this.flag.lineWidth =  2.5
         this.flag.strokeStyle = "red"
         this.flag.stroke();
         scounter = 0
@@ -234,8 +246,10 @@ function southFlag() {
     this.flag.rotate(this.angle * (Math.PI / 180));
     this.flag.beginPath();
     this.flag.moveTo(0,0);
-    this.flag.lineTo(50,-50);
-    this.flag.lineWidth = 6
+    this.flag.lineTo(42,-42);
+    this.flag.lineTo(42,0)
+    this.flag.lineTo(20,-20)
+    this.flag.lineWidth =  2.5
     this.flag.strokeStyle = "red"
     this.flag.stroke();
     this.angle += 5
@@ -253,8 +267,11 @@ function westFlag() {
         this.flag.rotate(0 * (Math.PI / 180));
         this.flag.beginPath();
         this.flag.moveTo(0,0);
-        this.flag.lineTo(50,-50);
-        this.flag.lineWidth = 6
+        this.flag.lineTo(42,-42);
+        this.flag.lineTo(42,0)
+        this.flag.lineTo(20,-20)
+        this.flag.lineTo(42,-20)
+        this.flag.lineWidth =  2.5
         this.flag.strokeStyle = "red"
         this.flag.stroke();
         wcounter = 0
@@ -267,9 +284,14 @@ function westFlag() {
     this.flag.rotate(-this.angle * (Math.PI / 180));
     this.flag.beginPath();
     this.flag.moveTo(0,0);
-    this.flag.lineTo(50,-50);
-    this.flag.lineWidth = 6
+    this.flag.lineTo(42,-42);
+    this.flag.lineTo(42,0)
+    this.flag.lineTo(20,-20)
+    this.flag.lineTo(42,-20)
+    this.flag.lineWidth =  2.5
+    // this.flag.fillStyle = "red"
     this.flag.strokeStyle = "red"
+    // this.flag.fill();
     this.flag.stroke();
     this.angle += 5
     wcounter += 1

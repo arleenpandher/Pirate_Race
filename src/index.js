@@ -1,8 +1,6 @@
 const Compdirection = require("./compdirection.js")
 const Game = require("./game.js");
 const GameView = require("./gameview.js");
-const MediumGame = require("./mediumgame.js");
-const HardGame = require("./hardgame.js");
 import "./index.scss"
 
 
@@ -14,8 +12,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     canvas.width= 600 
     canvas.height= 600 
     const flagcanvas = document.getElementById("flag");
-    flagcanvas.width= 100 
-    flagcanvas.height= 100 
+    flagcanvas.width= 100
+    flagcanvas.height= 100
+    // flagcanvas.style.top = "200px"
+    flagcanvas.style="border: 1px solid #000000"
     const flagctx = flagcanvas.getContext("2d")
     const scorecanvas = document.getElementById("score");
     const scorectx = scorecanvas.getContext("2d")
