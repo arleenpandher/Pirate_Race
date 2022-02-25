@@ -314,15 +314,15 @@ GameView.prototype.instructions = function() {
     this.drawing.fillStyle = "red"
     this.drawing.font = "24px 'Special Elite', cursive";
     this.drawing.fillText("When directions appear in red text press the ", 300, 125)
-    this.drawing.fillText("corresponding keyboard buttons as many times", 300, 155)
+    this.drawing.fillText("corresponding keyboard buttons as many times.", 300, 155)
     // this.drawing.fillText("", 300, 260)
     // this.drawing.fillText("times as you can.", 300, 290)
     this.drawing.drawImage(this.img1, 200, 157, 200, 150)
     this.drawing.fillStyle = "blue"
     this.drawing.font = "24px 'Special Elite', cursive";
-    this.drawing.fillText("Other pirate ships will try to confuse you by", 300, 315)
-    this.drawing.fillText("showing the wrong direction ARGH. When you see", 300, 345)
-    this.drawing.fillText("blue text travel in the opposite direction.", 300, 375)
+    this.drawing.fillText("Other pirates will try to confuse you by", 300, 315)
+    this.drawing.fillText("showing the wrong direction. ARGH! When you see", 300, 345)
+    this.drawing.fillText("blue text, travel in the opposite direction.", 300, 375)
     this.drawing.drawImage(this.img2, 200, 377, 200, 150)
     this.drawing.fillStyle = "black"
     this.drawing.fillText("Click on the screen to start.", 300, 555)
@@ -371,9 +371,9 @@ function remove() {
 
 
 GameView.prototype.end = function() {
-    if ((this.type === "easy" && this.game.score > 50) ||
-    (this.type === "medium" && this.game.score > 55) ||
-    (this.type === "hard" && this.game.score > 2)
+    if ((this.type === "easy" && this.game.score > 25) ||
+    (this.type === "medium" && this.game.score > 30) ||
+    (this.type === "hard" && this.game.score > 10)
     ) {
         
         this.drawing.clearRect(0, 0, 600, 600)
