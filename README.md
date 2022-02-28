@@ -14,6 +14,7 @@ Here is a live link of the site: https://arleenpandher.github.io/Pirate_Race/
 
 1. Randomized directions - Every time a new game start randomized directions with a random color (blue or red) appear on the screen.  This feature was implemeneted through the use of JavaScript's Math Library.  Randomizing the direction is extremly beneficial for the user experience because it ensures that everytime a user plays this game they can except a random set of directions to appear.  Futhermore, the setTimeOut method was used to display and discard directions at a different interval depending on the level.  It was difficult to use this function due to the asynchronicity, however by implementing the appearance and disappearance of each direction in a sepearte function, the code successfully renders at the correct time. 
 
+![Pirate1](https://user-images.githubusercontent.com/93013360/156056516-81f6d99c-9669-4c67-a7ec-3a383ea8b752.gif)
 
 
 1) Start the game 
