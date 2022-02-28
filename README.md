@@ -4,13 +4,17 @@ Plundering pirates is a game in which the user is guiding the ship.  One out of 
 
 The user wins when they correctly press the buttons corresponding to that direction a specific number of times.
 
-To win the easy level the score has to be above: 50 
-To win the medium level the score has to be above: 55
+To win the easy level the score has to be above: 25 
+To win the medium level the score has to be above: 30
 To win the medium level the score has to be above: 10 
 
-## Functionality & MVPs 
+Here is a live link of the site: https://arleenpandher.github.io/Pirate_Race/
 
-In this game, users will be able to: 
+## Functionality, MVPs, Features 
+
+1. Randomized directions - Every time a new game start randomized directions with a random color (blue or red) appear on the screen.  This feature was implemeneted through the use of JavaScript's Math Library.  Randomizing the direction is extremly beneficial for the user experience because it ensures that everytime a user plays this game they can except a random set of directions to appear.  Futhermore, the setTimeOut method was used to display and discard directions at a different interval depending on the level.  It was difficult to use this function due to the asynchronicity, however by implementing the appearance and disappearance of each direction in a sepearte function, the code successfully renders at the correct time. 
+
+
 
 1) Start the game 
 2) Press the four keyboard buttons that correspond to the four directions 
@@ -21,12 +25,12 @@ Functionalities of this game include:
 2) Directions will appear in blue letters on the screen (sabogating pirates)
 3) The score of the number of correct directions the user has selected will appear on the screen 
 
-Bonus: 
-1) Allowing users to pick a between easy, medium, and hard levels.
 
-### Wireframe 
+
+## Wireframe 
 ![](https://lh3.googleusercontent.com/gS1N8tVLu5Czu31wHG1BOWMa7hkKl7S-Bbulm_tgCavK1MR-KYPJBIDCxJiSReJa5AQuQMY7aTF5LL-b0ev4IkbCBkipPhCzlBpxRijDvgkUSAdlmbPdEA6D_C4D6yS9S7ntIKNvFqRyGa1OCTX9YH_-_jS8FXBAOTIBHjjQeYv_dmGewX3GnUW4QBpcDIyoUwDVXjadFyhyJkfWEmAkqBsFJj6-lG1U3XQhT4yHyAPC5aPThWs70jkkaS8v-JIUoH3dbGa-PYtFbqSNABXX4cicweGW53CbbMFKaKye94suhKnDzZahSCMSeb32GkrjTk06prr28H5J-6YiTI4zvmkJsNTdTwKl8vWe91Xv-Ud7kOq2Hp0xulPW9xvHZUrZ9wB-XWDn8xe3RFAUxIlzwUKdqfhLDpsQ99oHNHqC0DWcOCiAWaHoKdCo8aSQ22RA8DzHleDi-uEDVeRo2cuAqFLFCiG-ChhGgRj1YzYvPV7EDMGJRq5hlewCLXvLK-gcSizJtpwM_G14Pls6_6WX8XaafKi6837KeCYa8YYbjJZWGvhJm4WRjahd3UQfu7npOKcAqsLnr6qpxVrQPBUM5RlxAjkshm0msVL5CD6AxuKiReWr4J7t7Dxc_m-5CfjVo-OLSK-QXp0uIxxUixYdTnlmjqJIYtiBU3QfVcrKNpO8kCgAVXIBaAYHY0LtQrVElLS0Boxnx0NHfylHk3SXU48=w1024-h600-no?authuser=0)
-#### Technologies, Libraries, APIs
+
+## Technologies, Libraries, APIs
 
 This project will be implemented with the following technologies: 
 
@@ -36,5 +40,3 @@ This project will be implemented with the following technologies:
 
 
 
-##### Live Link
-https://arleenpandher.github.io/Pirate_Race/
