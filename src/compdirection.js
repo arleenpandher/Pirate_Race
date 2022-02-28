@@ -20,4 +20,3 @@ Compdirection.prototype.discard = function(ctx) {
 }
 
 module.exports = Compdirection;
-/ww
