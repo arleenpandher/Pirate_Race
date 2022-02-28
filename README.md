@@ -22,23 +22,16 @@ Here is a live link of the site: https://arleenpandher.github.io/Pirate_Race/
 
 ![screen-recording (2)](https://user-images.githubusercontent.com/93013360/156062614-78d35b0d-588f-48c9-8e9c-d919073f2c7e.gif)
 
+3. Score Updating - The user experience was further improved by making the game more challenging, when the user selects the incorrect direction, there is a penalty and the user's score decreases by 1.  The scoring was developed through the use of custom conditionally logic, when the user selects a presses a certain keyboard button, there are two checks that need to be completed. 
+  - If the direction color is red, then the user should select the corresponding button.  Example, if the direction is North, the user should select the up keyboard button.
+  - If the direction color is blue, then the user should select the opposite button.  Example, if the direction is North, the user should select the down keyboard button.
 
-2) Press the four keyboard buttons that correspond to the four directions 
+![screen-recording (4)](https://user-images.githubusercontent.com/93013360/156064225-6f29237a-51ef-4d7f-bd86-43fd497ef726.gif)
 
-Functionalities of this game include: 
-
-1) Directions will appear in red letters on the screen (nice pirates)
-2) Directions will appear in blue letters on the screen (sabogating pirates)
-3) The score of the number of correct directions the user has selected will appear on the screen 
-
-
-
-## Wireframe 
-![](https://lh3.googleusercontent.com/gS1N8tVLu5Czu31wHG1BOWMa7hkKl7S-Bbulm_tgCavK1MR-KYPJBIDCxJiSReJa5AQuQMY7aTF5LL-b0ev4IkbCBkipPhCzlBpxRijDvgkUSAdlmbPdEA6D_C4D6yS9S7ntIKNvFqRyGa1OCTX9YH_-_jS8FXBAOTIBHjjQeYv_dmGewX3GnUW4QBpcDIyoUwDVXjadFyhyJkfWEmAkqBsFJj6-lG1U3XQhT4yHyAPC5aPThWs70jkkaS8v-JIUoH3dbGa-PYtFbqSNABXX4cicweGW53CbbMFKaKye94suhKnDzZahSCMSeb32GkrjTk06prr28H5J-6YiTI4zvmkJsNTdTwKl8vWe91Xv-Ud7kOq2Hp0xulPW9xvHZUrZ9wB-XWDn8xe3RFAUxIlzwUKdqfhLDpsQ99oHNHqC0DWcOCiAWaHoKdCo8aSQ22RA8DzHleDi-uEDVeRo2cuAqFLFCiG-ChhGgRj1YzYvPV7EDMGJRq5hlewCLXvLK-gcSizJtpwM_G14Pls6_6WX8XaafKi6837KeCYa8YYbjJZWGvhJm4WRjahd3UQfu7npOKcAqsLnr6qpxVrQPBUM5RlxAjkshm0msVL5CD6AxuKiReWr4J7t7Dxc_m-5CfjVo-OLSK-QXp0uIxxUixYdTnlmjqJIYtiBU3QfVcrKNpO8kCgAVXIBaAYHY0LtQrVElLS0Boxnx0NHfylHk3SXU48=w1024-h600-no?authuser=0)
 
 ## Technologies, Libraries, APIs
 
-This project will be implemented with the following technologies: 
+This project was implemented using the following technologies: 
 
 1) The Canvas API to render the game screen 
 2) Webpack and Babel to bundle and transpile the source JavaScript code 
