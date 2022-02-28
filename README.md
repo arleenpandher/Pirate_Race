@@ -17,7 +17,11 @@ Here is a live link of the site: https://arleenpandher.github.io/Pirate_Race/
 ![Pirate1](https://user-images.githubusercontent.com/93013360/156056516-81f6d99c-9669-4c67-a7ec-3a383ea8b752.gif)
 
 
-1) Start the game 
+2. Dynamic Flag Movements - The user experience was improved through the use of DOM Manipulation in Vanilla JavaScript.  When a user presses the the up keyboard button, the flag will rotate updwards.  The rotation was implemented through the use of request animation frame and cancel animation frame method.  There were two major difficultiies in getting the flag rotation to work, firstly, it was necessary that the flag rotates from a single point and this was done through the use of the translate method which sets the orgin point of rotation.  However, since translate also offsets the flag location, after the first rotation the flag would not return to the same orgin spot, consqeuntly, the set transform method was used to return the flag to the orginal location everytime before the user could rotate the flag. 
+
+
+
+
 2) Press the four keyboard buttons that correspond to the four directions 
 
 Functionalities of this game include: 
